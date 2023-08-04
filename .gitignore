@@ -14,8 +14,11 @@ pids
 
 # Dependency directories
 /node_modules
+/dist
 /yarn.lock
 /package-lock.json
+/www
+/app-config.json
 
 # Optional npm cache directory
 .npm
