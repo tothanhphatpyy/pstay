@@ -39,7 +39,7 @@ const App = () => {
   }, [navbarPosition]);
 
   return (
-    <Router basename={process.env.NODE_ENV !== "production" ? `/zapps/${window.APP_ID}` : ""}>
+    <Router basename={process.env.NODE_ENV === "production" ? `/zapps/${window.APP_ID}` : ""}>
       <DigiBirdRoutes />
       {/* <SettingsToggle />
       <SettingsPanel />
