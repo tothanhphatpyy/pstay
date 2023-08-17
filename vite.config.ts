@@ -5,8 +5,13 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default () => {
   return defineConfig({
-    /* root: "./src", */
-    base: "/",
+    server: {
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost'
+      },
+      port: 8080,
+    },
     plugins: [reactRefresh()],
     resolve: {
       alias: {
@@ -17,7 +22,6 @@ export default () => {
         '@context': path.resolve(__dirname, './src/context'),
         '@layouts': path.resolve(__dirname, './src/layouts'),
         '@data': path.resolve(__dirname, 'src/data'),
-
       },
     },
     css: {
