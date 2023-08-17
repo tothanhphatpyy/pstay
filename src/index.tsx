@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 import '@helpers/initFA';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import './assets/scss/theme.scss'
 
 import App from './App';
 import appConfig from "../app-config.json";

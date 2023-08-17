@@ -26,20 +26,13 @@ export default () => {
         '@reducers': path.resolve(__dirname, "src/reducers"),
         '@routes': path.resolve(__dirname, "src/routes"),
         '@widgets': path.resolve(__dirname, "src/widgets"),
-        '"~bootstrap"': path.resolve(__dirname, "node_modules/bootstrap"),
+        "~bootstrap": path.resolve(__dirname, "node_modules/bootstrap"),
         "~leaflet": path.resolve(__dirname, "node_modules/leaflet"),
         '@config': path.resolve(__dirname, "src/config"),
         '@zalo': path.resolve(__dirname, "src/zalo"),
         '@web': path.resolve(__dirname, "src/web"),
         '@atom': path.resolve(__dirname, "src/atom"),
         '@services': path.resolve(__dirname, "src/services"),
-      },
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "./src/assets/scss/_variables.scss";', // Replace with the path to your shared variables file
-        },
       },
     },
   });

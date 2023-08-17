@@ -53,7 +53,7 @@ const Main = props => {
     });
   };
 
-  if (!isLoaded) {
+/*   if (!isLoaded) {
     return (
       <div
         style={{
@@ -66,7 +66,7 @@ const Main = props => {
         }}
       />
     );
-  }
+  } */
 
   return (
     <AppContext.Provider value={{ config, setConfig, configDispatch }}>
