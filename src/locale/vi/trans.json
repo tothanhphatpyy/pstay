@@ -1,0 +1,10 @@
+{
+  "button": {
+    "search": "Tìm kiếm",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "save": "Lưu"
+  },
+  "lang": "Tiếng Việt",
+  "total_order" : "Tổng số order"
+}

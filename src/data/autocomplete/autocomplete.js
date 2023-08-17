@@ -1,8 +1,7 @@
-import imageFile1 from 'assets/img/products/3-thumb.png';
-import imageFile2 from 'assets/img/icons/zip.png';
-import imageMember1 from 'assets/img/team/1.jpg';
-import imageMember2 from 'assets/img/team/2.jpg';
-import imageMember3 from 'assets/img/team/3.jpg';
+import imageFile1 from '@assets/img/products/3-thumb.png';
+import imageMember1 from '@assets/img/team/1.jpg';
+import imageMember2 from '@assets/img/team/2.jpg';
+import imageMember3 from '@assets/img/team/3.jpg';
 
 const autoCompleteInitialItem = [
   {
@@ -57,7 +56,7 @@ const autoCompleteInitialItem = [
     id: 7,
     catagories: 'suggestionFiles',
     url: '#!',
-    img: imageFile2,
+    img: imageFile1,
     file: true,
     title: 'DigiBird v1.8.2',
     imgAttrs: {

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import AppContext from 'context/Context';
+import AppContext from '@context/Context';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { CloseButton } from 'react-bootstrap';

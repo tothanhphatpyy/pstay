@@ -17,8 +17,8 @@ import {
 
 import TotalOrder from './TotalOrder';
 import MarketShare from './MarketShare';
-// import TotalSales from './TotalSales';
-// import RunningProjects from './RunningProjects';
+import TotalSales from './TotalSales';
+import RunningProjects from './RunningProjects';
 // import StorageStatus from './StorageStatus';
 // import SpaceWarning from './SpaceWarning';
 // import BestSellingProducts from './BestSellingProducts';
@@ -46,7 +46,7 @@ const Dashboard = () => {
         </Col>
       </Row>
 
-      {/* <Row className="g-3 mb-3">
+      <Row className="g-3 mb-3">
         <Col lg={6}>
           <RunningProjects data={runningProjects} />
         </Col>
@@ -55,25 +55,25 @@ const Dashboard = () => {
         </Col>
       </Row>
 
-      <Row className="g-3 mb-3">
+      {/* <Row className="g-3 mb-3">
         <Col lg={6} xl={7} xxl={8}>
           <StorageStatus className="h-lg-100" data={storageStatus} />
         </Col>
         <Col lg={6} xl={5} xxl={4}>
           <SpaceWarning />
         </Col>
-      </Row>
+      </Row> */}
 
-      <Row className="g-3 mb-3">
+      {/* <Row className="g-3 mb-3">
         <Col lg={7} xl={8}>
           <BestSellingProducts products={products} />
         </Col>
         <Col lg={5} xl={4}>
           <SharedFiles files={files} className="h-lg-100" />
         </Col>
-      </Row>
+      </Row> */}
 
-      <Row className="g-3">
+      {/* <Row className="g-3">
         <Col sm={6} xxl={3}>
           <ActiveUsers className="h-100" users={users} />
         </Col>

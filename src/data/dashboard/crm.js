@@ -1,17 +1,17 @@
-import { getDates } from 'helpers/utils';
-import email from 'assets/img/icons/email.svg';
-import social from 'assets/img/icons/social.svg';
-import call from 'assets/img/icons/call.svg';
-import other from 'assets/img/icons/other.svg';
-import india from 'assets/img/country/india.png';
-import uae from 'assets/img/country/uae.png';
-import nepal from 'assets/img/country/nepal.png';
-import thailand from 'assets/img/country/thailand.png';
-import team1 from 'assets/img/team/1-thumb.png';
-import team2 from 'assets/img/team/2-thumb.png';
-import team3 from 'assets/img/team/3-thumb.png';
-import team4 from 'assets/img/team/4-thumb.png';
-import team5 from 'assets/img/team/5-thumb.png';
+import { getDates } from '@helpers/utils';
+import email from '@assets/img/icons/email.svg';
+import social from '@assets/img/icons/social.svg';
+import call from '@assets/img/icons/call.svg';
+import other from '@assets/img/icons/other.svg';
+import india from '@assets/img/country/india.png';
+import uae from '@assets/img/country/uae.png';
+import nepal from '@assets/img/country/nepal.png';
+import thailand from '@assets/img/country/thailand.png';
+import team1 from '@assets/img/team/1-thumb.png';
+import team2 from '@assets/img/team/2-thumb.png';
+import team3 from '@assets/img/team/3-thumb.png';
+import team4 from '@assets/img/team/4-thumb.png';
+import team5 from '@assets/img/team/5-thumb.png';
 
 export const statsData = [
   {

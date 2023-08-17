@@ -1,4 +1,4 @@
-import { version } from 'config';
+import { version } from '@config';
 import packageInfo from '../../package.json';
 
 const { homepage } = packageInfo;

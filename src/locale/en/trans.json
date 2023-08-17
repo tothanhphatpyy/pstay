@@ -1,0 +1,11 @@
+{
+    "button": {
+    "search": "Search",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "save": "Save"
+    },
+    "lang": "English",
+    "total_order" : "Total Order"
+    
+  }

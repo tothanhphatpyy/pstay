@@ -1,5 +1,5 @@
 import person2 from 'assets/img/team/2.jpg';
-import person3 from 'assets/img/team/3.jpg';
+import person3 from '@assets/img/team/3.jpg';
 import person4 from 'assets/img/team/4.jpg';
 import person5 from 'assets/img/team/5.jpg';
 import person6 from 'assets/img/team/6.jpg';
