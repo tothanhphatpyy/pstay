@@ -35,9 +35,9 @@ const useToggleStylesheet = (isRTL, isDark, configDispatch) => {
 
   useEffect(() => {
     document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
-    configDispatch({
+    /* configDispatch({
       type: 'REFRESH'
-    });
+    }); */
   }, [isDark]);
 
   return { isLoaded };

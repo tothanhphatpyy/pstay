@@ -16,6 +16,7 @@ export default () => {
         '@helpers': path.resolve(__dirname, './src/helpers'),
         '@context': path.resolve(__dirname, './src/context'),
         '@layouts': path.resolve(__dirname, './src/layouts'),
+        '@data': path.resolve(__dirname, 'src/data'),
 
       },
     },

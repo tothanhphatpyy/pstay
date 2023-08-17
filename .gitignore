@@ -19,6 +19,7 @@ pids
 /package-lock.json
 /www
 /app-config.json
+/hr-config.json
 
 # Optional npm cache directory
 .npm

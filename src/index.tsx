@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import Main from './Main';
+/* import Main from './Main'; */
 import '@helpers/initFA';
 import appConfig from "../app-config.json";
 
@@ -15,9 +15,9 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Main>
+    {/* <Main> */}
       <App />
-    </Main>
+    {/* </Main> */}
   </React.StrictMode>
 );
 

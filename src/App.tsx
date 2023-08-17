@@ -9,12 +9,14 @@ import DigiBirdRoutes from './routes';
 // import SettingsPanel from 'components/settings-panel/SettingsPanel';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import useToggleStyle from './hooks/useToggleStyle';
 
 const App = () => {
   const HTMLClassList = document.getElementsByTagName('html')[0].classList;
-  const {
+  /* const {
     config: { navbarPosition }
-  } = useContext(AppContext);
+  } = useContext(AppContext); */
+  
 
   useEffect(() => {
     if (is.windows()) {
@@ -30,13 +32,19 @@ const App = () => {
       HTMLClassList.add('safari');
     }
   }, [HTMLClassList]);
+  const { isLoaded } = useToggleStyle(
+    false,
+    false,
+    null
+  );
 
-  useEffect(() => {
+  console.log(isLoaded);
+  /* useEffect(() => {
     if (navbarPosition === 'double-top') {
       HTMLClassList.add('double-top-nav-layout');
     }
     return () => HTMLClassList.remove('double-top-nav-layout');
-  }, [navbarPosition]);
+  }, [navbarPosition]); */
 
   return (
     <Router basename={process.env.NODE_ENV === "production" ? `/zapps/${window.APP_ID}` : ""}>
