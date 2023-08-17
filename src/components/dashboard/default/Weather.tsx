@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Col, Row } from 'react-bootstrap';
-import DigiBirdCardHeader from 'components/common/DigiBirdCardHeader';
-import CardDropdown from 'components/common/CardDropdown';
-import weatherIcon from 'assets/img/icons/weather-icon.png';
-import Flex from 'components/common/Flex';
+import DigiBirdCardHeader from '@components/common/DigiBirdCardHeader';
+import CardDropdown from '@components/common/CardDropdown';
+import weatherIcon from '@assets/img/icons/weather-icon.png';
+import Flex from '@components/common/Flex';
 
 const Weather = ({
   data: {

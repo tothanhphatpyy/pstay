@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Flex from 'components/common/Flex';
+import Flex from '@components/common/Flex';
 import { PieChart } from 'echarts/charts';
 import * as echarts from 'echarts/core';
-import { getColor } from 'helpers/utils';
+import { getColor } from '@helpers/utils';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 
-import BasicECharts from 'components/common/BasicEChart';
+import BasicECharts from '@components/common/BasicEChart';
 import {
   GridComponent,
   TitleComponent,

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import DigiBirdCardFooterLink from 'components/common/DigiBirdCardFooterLink';
-import DigiBirdCardHeader from 'components/common/DigiBirdCardHeader';
-import Flex from 'components/common/Flex';
+import DigiBirdCardFooterLink from '@components/common/DigiBirdCardFooterLink';
+import DigiBirdCardHeader from '@components/common/DigiBirdCardHeader';
+import Flex from '@components/common/Flex';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Badge, Card, Col, Form, ProgressBar, Row } from 'react-bootstrap';

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import SplitLogin from '@components/authentication/split/Login';
+// import SplitLogin from '@components/authentication/split/Login';
+import DashBoard from '@components/dashboard/default';
 
 const DigiBirdRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<SplitLogin />} />
+      <Route path="/" element={<DashBoard />} />
     </Routes>
   );
 };

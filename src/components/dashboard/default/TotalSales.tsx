@@ -1,6 +1,6 @@
-import CardDropdown from 'components/common/CardDropdown';
-import DigiBirdCardHeader from 'components/common/DigiBirdCardHeader';
-import Flex from 'components/common/Flex';
+import CardDropdown from '@components/common/CardDropdown';
+import DigiBirdCardHeader from '@components/common/DigiBirdCardHeader';
+import Flex from '@components/common/Flex';
 import ReactEChartsCore from 'echarts-for-react/lib/core';
 import { LineChart } from 'echarts/charts';
 import * as echarts from 'echarts/core';
@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Card, Form } from 'react-bootstrap';
 
-import { months } from 'data/common';
+import { months } from '@data/common';
 import {
   GridComponent,
   LegendComponent,
@@ -16,7 +16,7 @@ import {
   TooltipComponent
 } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
-import { capitalize, getColor, rgbaColor } from 'helpers/utils';
+import { capitalize, getColor, rgbaColor } from '@helpers/utils';
 
 echarts.use([
   TitleComponent,

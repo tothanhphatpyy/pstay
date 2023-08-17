@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DigiBirdCardFooterLink from 'components/common/DigiBirdCardFooterLink';
-import DigiBirdCardHeader from 'components/common/DigiBirdCardHeader';
-import CardDropdown from 'components/common/CardDropdown';
+import DigiBirdCardFooterLink from '@components/common/DigiBirdCardFooterLink';
+import DigiBirdCardHeader from '@components/common/DigiBirdCardHeader';
+import CardDropdown from '@components/common/CardDropdown';
 import { Card } from 'react-bootstrap';
-import Flex from 'components/common/Flex';
+import Flex from '@components/common/Flex';
 import { Link } from 'react-router-dom';
-import Avatar from 'components/common/Avatar';
+import Avatar from '@components/common/Avatar';
 import classNames from 'classnames';
 
 const ActiveUsers = ({ users, end = 5, ...rest }) => {

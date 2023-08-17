@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import CardDropdown from 'components/common/CardDropdown';
-import DigiBirdCardHeader from 'components/common/DigiBirdCardHeader';
-import Flex from 'components/common/Flex';
+import CardDropdown from '@components/common/CardDropdown';
+import DigiBirdCardHeader from '@components/common/DigiBirdCardHeader';
+import Flex from '@components/common/Flex';
 import ReactEChartsCore from 'echarts-for-react/lib/core';
 import { GaugeChart } from 'echarts/charts';
 import {
@@ -13,7 +13,7 @@ import {
 } from 'echarts/components';
 import * as echarts from 'echarts/core';
 import { CanvasRenderer } from 'echarts/renderers';
-import { getColor } from 'helpers/utils';
+import { getColor } from '@helpers/utils';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Card, Col, Form, Row } from 'react-bootstrap';

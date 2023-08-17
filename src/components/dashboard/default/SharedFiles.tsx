@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import DigiBirdCardHeader from 'components/common/DigiBirdCardHeader';
+import DigiBirdCardHeader from '@components/common/DigiBirdCardHeader';
 import { Link } from 'react-router-dom';
-import Flex from 'components/common/Flex';
+import Flex from '@components/common/Flex';
 import classNames from 'classnames';
-import cloudDownload from 'assets/img/icons/cloud-download.svg';
-import editAlt from 'assets/img/icons/edit-alt.svg';
+import cloudDownload from '@assets/img/icons/cloud-download.svg';
+import editAlt from '@assets/img/icons/edit-alt.svg';
 
 const SharedFiles = ({ files, className }) => {
   return (

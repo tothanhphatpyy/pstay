@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Badge, Card } from 'react-bootstrap';
-import Flex from 'components/common/Flex';
-import { getColor, rgbaColor } from 'helpers/utils';
+import Flex from '@components/common/Flex';
+import { getColor, rgbaColor } from '@helpers/utils';
 import * as echarts from 'echarts/core';
 import { LineChart } from 'echarts/charts';
 
@@ -13,7 +13,7 @@ import {
   TitleComponent
 } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
-import BasicECharts from 'components/common/BasicEChart';
+import BasicECharts from '@components/common/BasicEChart';
 import { useTranslation } from 'react-i18next';
 
 echarts.use([

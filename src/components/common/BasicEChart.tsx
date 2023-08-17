@@ -1,5 +1,5 @@
 import ReactEChartsCore from 'echarts-for-react/lib/core';
-import { getColor } from 'helpers/utils';
+import { getColor } from '@helpers/utils';
 import merge from 'lodash.merge';
 import PropTypes from 'prop-types';
 import React from 'react';

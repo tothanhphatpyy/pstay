@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Dropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import AppContext from 'context/Context';
+import AppContext from '@context/Context';
 
 const CardDropdown = ({
   btnRevealClass,

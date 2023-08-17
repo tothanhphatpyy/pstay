@@ -1,22 +1,22 @@
-import product10 from 'assets/img/products/10.png';
-import product11 from 'assets/img/products/11.png';
-import product12 from 'assets/img/products/12.png';
-import product13 from 'assets/img/products/13.png';
-import product14 from 'assets/img/products/14.png';
+import product10 from '@assets/img/products/10.png';
+import product11 from '@assets/img/products/11.png';
+import product12 from '@assets/img/products/12.png';
+import product13 from '@assets/img/products/13.png';
+import product14 from '@assets/img/products/14.png';
 
-import iconDocs from 'assets/img/icons/docs.png';
-import iconZip from 'assets/img/icons/zip.png';
-import product2 from 'assets/img/products/2.jpg';
-import product3 from 'assets/img/products/3.jpg';
-import product5 from 'assets/img/products/5.jpg';
+import iconDocs from '@assets/img/icons/docs.png';
+import iconZip from '@assets/img/icons/zip.png';
+import product2 from '@assets/img/products/2.jpg';
+import product3 from '@assets/img/products/3.jpg';
+import product5 from '@assets/img/products/5.jpg';
 
-import team1 from 'assets/img/team/1.jpg';
-import team2 from 'assets/img/team/2.jpg';
-import team3 from 'assets/img/team/3.jpg';
-import team4 from 'assets/img/team/4.jpg';
-import team5 from 'assets/img/team/5.jpg';
-import team6 from 'assets/img/team/6.jpg';
-import team7 from 'assets/img/team/7.jpg';
+import team1 from '@assets/img/team/1.jpg';
+import team2 from '@assets/img/team/2.jpg';
+import team3 from '@assets/img/team/3.jpg';
+import team4 from '@assets/img/team/4.jpg';
+import team5 from '@assets/img/team/5.jpg';
+import team6 from '@assets/img/team/6.jpg';
+import team7 from '@assets/img/team/7.jpg';
 
 export const weeklySalesData = [6000, 9000, 8500, 4000, 4500, 6500, 7000];
 

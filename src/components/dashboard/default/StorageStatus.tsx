@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import Flex from 'components/common/Flex';
+import Flex from '@components/common/Flex';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Card, Col, ProgressBar, Row } from 'react-bootstrap';

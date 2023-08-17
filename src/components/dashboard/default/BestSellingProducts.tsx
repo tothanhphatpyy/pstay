@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Flex from 'components/common/Flex';
+import Flex from '@components/common/Flex';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
