@@ -9,7 +9,8 @@ import DigiBirdRoutes from './routes';
 // import SettingsPanel from 'components/settings-panel/SettingsPanel';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-toastify/dist/ReactToastify.min.css';
-import useToggleStyle from './hooks/useToggleStyle';
+import { RecoilRoot } from 'recoil';
+import Main from './Main';
 
 const App = () => {
   const HTMLClassList = document.getElementsByTagName('html')[0].classList;
@@ -32,13 +33,8 @@ const App = () => {
       HTMLClassList.add('safari');
     }
   }, [HTMLClassList]);
-  const { isLoaded } = useToggleStyle(
-    false,
-    false,
-    null
-  );
 
-  console.log(isLoaded);
+
   /* useEffect(() => {
     if (navbarPosition === 'double-top') {
       HTMLClassList.add('double-top-nav-layout');
@@ -47,6 +43,8 @@ const App = () => {
   }, [navbarPosition]); */
 
   return (
+    <RecoilRoot>
+    <Main>
     <Router basename={process.env.NODE_ENV === "production" ? `/zapps/${window.APP_ID}` : ""}>
       <DigiBirdRoutes />
       {/* <SettingsToggle />
@@ -57,6 +55,8 @@ const App = () => {
         position={toast.POSITION.BOTTOM_LEFT}
       /> */}
     </Router>
+    </Main>
+    </RecoilRoot>
   );
 };
 
