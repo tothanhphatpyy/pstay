@@ -2,7 +2,7 @@
     "listCSS": [],
     "listJS": [
         {
-            "src": "/src/app.js",
+            "src": "/src/index.tsx",
             "type": "module",
             "async": true
         },
