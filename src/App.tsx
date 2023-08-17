@@ -1,30 +1,8 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
-import { Spinner } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
 import is from "is_js";
 import Main from "./Main";
-
-const WebRoot = React.lazy(() => import("./web/Root"));
-const ZaloRoot = React.lazy(() => import("./zalo/Root"));
-
-const LoadingComponent = () => {
-  return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        backgroundColor: 'rgba(204,204,204,0.4)',
-      }}
-    >
-      <div className="d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
-        <Spinner animation="grow" />
-        <span>Loading...</span>
-      </div>
-    </div>
-  );
-};
+import WebRoot from "./web/Root";
+import ZaloRoot from "./zalo/Root"  
 
 const App = () => {
   const [platform, setPlatform] = useState("zalo");
@@ -66,11 +44,9 @@ const App = () => {
   }, [navbarPosition]); */
 
   return (
-    <Suspense fallback={<LoadingComponent />}>
       <Main>
         {platform === "zalo" ? <ZaloRoot /> : <WebRoot />}
       </Main>
-    </Suspense>
   );
 };
 
