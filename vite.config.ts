@@ -37,9 +37,9 @@ export default () => {
     },
     css: {
       preprocessorOptions: {
-        scss: {
+        /* scss: {
           additionalData: '@import "./src/assets/scss/_variables.scss";', // Replace with the path to your shared variables file
-        },
+        }, */
       },
     },
   });

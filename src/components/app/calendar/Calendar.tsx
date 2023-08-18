@@ -18,12 +18,11 @@ import events from 'data/calendar/events';
 import AddScheduleModal from './AddScheduleModal';
 import CalendarEventModal from './CalendarEventModal';
 import DropdownFilter from 'components/common/DropdownFilter';
-import AppContext from '@context/Context';
+import { useConfigValue } from '@/atom/config_app';
 
 const Calendar = () => {
-  const {
-    config: { isRTL }
-  } = useContext(AppContext);
+ 
+  const { isRTL } = useConfigValue();
   const calendarRef = useRef();
   const [title, setTitle] = useState('');
   const [calendarApi, setCalendarApi] = useState({});
