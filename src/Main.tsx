@@ -7,10 +7,15 @@ import { configReducer } from './reducers/configReducer';
 import useToggleStyle from './hooks/useToggleStyle';
 
 import { Chart as ChartJS, registerables } from 'chart.js';
+import { useConfigValue } from './atom/config_app';
 ChartJS.register(...registerables);
 
 const Main = props => {
-  const configState = {
+  
+  const config = useConfigValue();
+
+  /* const [config, configDispatch] = useReducer(configReducer, configState); */
+  /* const config = {
     isFluid: getItemFromStore('isFluid', settings.isFluid),
     isRTL: getItemFromStore('isRTL', settings.isRTL),
     isDark: getItemFromStore('isDark', settings.isDark),
@@ -25,10 +30,15 @@ const Main = props => {
     showBurgerMenu: settings.showBurgerMenu,
     showSettingPanel: false,
     navbarCollapsed: false
-  };
+  }; */
+  
+  const configDispatch = ()=>{}
 
-  const [config, configDispatch] = useReducer(configReducer, configState);
-
+  /* const { isLoaded } = useToggleStyle(
+    config.isRTL,
+    config.isDark,
+    configDispatch
+  ); */
   const { isLoaded } = useToggleStyle(
     config.isRTL,
     config.isDark,
@@ -36,7 +46,7 @@ const Main = props => {
   );
 
   const setConfig = (key, value) => {
-    configDispatch({
+    /* configDispatch({
       type: 'SET_CONFIG',
       payload: {
         key,
@@ -50,7 +60,7 @@ const Main = props => {
           'navbarStyle'
         ].includes(key)
       }
-    });
+    }); */
   };
 
 /*   if (!isLoaded) {

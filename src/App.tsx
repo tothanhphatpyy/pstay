@@ -3,6 +3,7 @@ import is from "is_js";
 import Main from "./Main";
 import WebRoot from "./web/Root";
 import ZaloRoot from "./zalo/Root"  
+import useToggleStylesheet from "./hooks/useToggleStyle";
 
 const App = () => {
   const [platform, setPlatform] = useState("zalo");
@@ -42,7 +43,6 @@ const App = () => {
     }
     return () => HTMLClassList.remove('double-top-nav-layout');
   }, [navbarPosition]); */
-
   return (
       <Main>
         {platform === "zalo" ? <ZaloRoot /> : <WebRoot />}

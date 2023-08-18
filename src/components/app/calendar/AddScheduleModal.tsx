@@ -4,8 +4,8 @@ import { Button, Form, Modal } from 'react-bootstrap';
 import { v4 as uuid } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import AppContext from '@context/Context';
 import DatePicker from 'react-datepicker';
+import { useConfigValue } from '@/atom/config_app';
 
 const AddScheduleModal = ({
   setIsOpenScheduleModal,
@@ -17,9 +17,8 @@ const AddScheduleModal = ({
   scheduleEndDate,
   setScheduleEndDate
 }) => {
-  const {
-    config: { isDark }
-  } = useContext(AppContext);
+
+  const { isDark } = useConfigValue();
 
   const [formData, setFormData] = useState({});
 
