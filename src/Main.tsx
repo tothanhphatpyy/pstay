@@ -12,10 +12,8 @@ ChartJS.register(...registerables);
 
 const Main = props => {
   
-  const config = useConfigValue();
-
-  /* const [config, configDispatch] = useReducer(configReducer, configState); */
-  /* const config = {
+  
+  const configState = {
     isFluid: getItemFromStore('isFluid', settings.isFluid),
     isRTL: getItemFromStore('isRTL', settings.isRTL),
     isDark: getItemFromStore('isDark', settings.isDark),
@@ -30,15 +28,13 @@ const Main = props => {
     showBurgerMenu: settings.showBurgerMenu,
     showSettingPanel: false,
     navbarCollapsed: false
-  }; */
-  
-  const configDispatch = ()=>{}
+  };
 
-  /* const { isLoaded } = useToggleStyle(
-    config.isRTL,
-    config.isDark,
-    configDispatch
-  ); */
+  const [config, configDispatch] = useReducer(configReducer, configState);
+  
+  /* const config = useConfigValue();
+  const configDispatch = ()=>{} */
+
   const { isLoaded } = useToggleStyle(
     config.isRTL,
     config.isDark,
@@ -46,7 +42,7 @@ const Main = props => {
   );
 
   const setConfig = (key, value) => {
-    /* configDispatch({
+    configDispatch({
       type: 'SET_CONFIG',
       payload: {
         key,
@@ -60,9 +56,9 @@ const Main = props => {
           'navbarStyle'
         ].includes(key)
       }
-    }); */
+    });
   };
-
+  console.log(isLoaded);
   if (!isLoaded) {
     return (
       <div
