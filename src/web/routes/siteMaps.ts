@@ -1,12 +1,13 @@
+import i18n from "@i18n";
 export const dashboardRoutes = {
   label: 'Dashboard',
   labelDisable: true,
   children: [
     {
-      name: 'Dashboard',
+      name: `${i18n.t('search')}`,
       active: true,
       icon: 'chart-pie',
-      children: [
+      /* children: [
         {
           name: 'Default',
           to: '/',
@@ -56,12 +57,12 @@ export const dashboardRoutes = {
             text: 'New'
           }
         }
-      ]
+      ] */
     }
   ]
 };
 export const appRoutes = {
-  label: 'app',
+  label: 'Nhân viên',
   children: [
     {
       name: 'Calendar',
@@ -1304,11 +1305,68 @@ export const documentationRoutes = {
     }
   ]
 };
+export const valonRoutes = {
+  label: 'vai',
+  children: [
+    {
+      name: 'Getting started',
+      icon: 'rocket',
+      to: '/documentation/getting-started',
+      active: true
+    },
+    {
+      name: 'Customization',
+      active: true,
+      icon: 'wrench',
+      children: [
+        {
+          name: 'Configuration',
+          to: '/documentation/configuration',
+          active: true
+        },
+        {
+          name: 'Styling',
+          to: '/documentation/styling',
+          active: true
+        },
+        {
+          name: 'Dark mode',
+          to: '/documentation/dark-mode',
+          active: true
+        },
+        {
+          name: 'Plugin',
+          to: '/documentation/plugin',
+          active: true
+        }
+      ]
+    },
+    {
+      name: 'Faq',
+      icon: 'question-circle',
+      to: '/documentation/faq',
+      active: true
+    },
+    {
+      name: 'Design file',
+      icon: 'palette',
+      to: '/documentation/design-file',
+      active: true
+    },
+    {
+      name: 'Changelog',
+      icon: 'code-branch',
+      to: '/changelog',
+      active: true
+    }
+  ]
+};
 
 export default [
   dashboardRoutes,
   appRoutes,
   pagesRoutes,
   modulesRoutes,
-  documentationRoutes
+  documentationRoutes,
+  valonRoutes
 ];
