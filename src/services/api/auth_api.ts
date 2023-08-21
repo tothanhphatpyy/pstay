@@ -1,4 +1,4 @@
-import { getAccessToken } from 'services/tokenManager';
+import { getAccessToken } from '@services/tokenManager';
 import { ApiUtils } from './index';
 import { PATH } from './path';
 

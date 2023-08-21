@@ -2,10 +2,10 @@
 import { atom, useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { useUserState } from "./user_info";
 import { useRequest } from "ahooks";
-import { signUpWebApi } from "services/api/auth_api";
+import { signUpWebApi } from "@services/api/auth_api";
 import { useNavigate } from "react-router-dom";
-import { isTokenValid } from "services/tokenManager";
-import { StorageKey, getDataToStorage, removeDataToStorage, setDataToStorage } from "services/storage";
+import { isTokenValid } from "@services/tokenManager";
+import { StorageKey, getDataToStorage, removeDataToStorage, setDataToStorage } from "@services/storage";
 
 const AUTH_STATE = atom({
     key: 'AUTH_STATE', // unique ID (with respect to other atoms/selectors)
@@ -45,7 +45,7 @@ export const useAuth = () => {
         removeDataToStorage(StorageKey.Authen);
         setUserState(null)
         setAuth(null);
-        navigate('/authentication/split/login');
+        navigate('/login');
     }
 
     return { loginWeb, logout };

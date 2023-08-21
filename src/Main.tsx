@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from '@context/Context';
 import { settings } from './config';
@@ -8,11 +8,16 @@ import useToggleStyle from './hooks/useToggleStyle';
 
 import { Chart as ChartJS, registerables } from 'chart.js';
 import { useConfigValue } from './atom/config_app';
+import { useUserInfo, useUserValue } from './atom/user_info';
 ChartJS.register(...registerables);
 
 const Main = props => {
-  
-  
+  const { getProfileUser } = useUserInfo();
+  const infoUser = useUserValue();
+  useEffect(() => {
+    getProfileUser();
+  },[])
+
   const configState = {
     isFluid: getItemFromStore('isFluid', settings.isFluid),
     isRTL: getItemFromStore('isRTL', settings.isRTL),
