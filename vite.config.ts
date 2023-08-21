@@ -15,7 +15,7 @@ export default () => {
     plugins: [reactRefresh()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src'), // Replace 'src' with your source directory if different
+        
         '@assets': path.resolve(__dirname, './src/assets'),
         '@components': path.resolve(__dirname, './src/components'),
         '@helpers': path.resolve(__dirname, './src/helpers'),
@@ -33,6 +33,7 @@ export default () => {
         '@web': path.resolve(__dirname, "src/web"),
         '@atom': path.resolve(__dirname, "src/atom"),
         '@services': path.resolve(__dirname, "src/services"),
+        '@i18n': path.resolve(__dirname, "./i18n-config.ts"),
       },
     },
   });

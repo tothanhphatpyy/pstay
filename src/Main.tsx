@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from '@context/Context';
 import { settings } from './config';
@@ -8,14 +8,16 @@ import useToggleStyle from './hooks/useToggleStyle';
 
 import { Chart as ChartJS, registerables } from 'chart.js';
 import { useConfigValue } from './atom/config_app';
+import { useUserInfo, useUserValue } from './atom/user_info';
 ChartJS.register(...registerables);
 
 const Main = props => {
-  
-  const config = useConfigValue();
+  const { getProfileUser } = useUserInfo();
+  useEffect(() => {
+    getProfileUser();
+  },[])
 
-  /* const [config, configDispatch] = useReducer(configReducer, configState); */
-  /* const config = {
+  const configState = {
     isFluid: getItemFromStore('isFluid', settings.isFluid),
     isRTL: getItemFromStore('isRTL', settings.isRTL),
     isDark: getItemFromStore('isDark', settings.isDark),
@@ -30,15 +32,13 @@ const Main = props => {
     showBurgerMenu: settings.showBurgerMenu,
     showSettingPanel: false,
     navbarCollapsed: false
-  }; */
-  
-  const configDispatch = ()=>{}
+  };
 
-  /* const { isLoaded } = useToggleStyle(
-    config.isRTL,
-    config.isDark,
-    configDispatch
-  ); */
+  const [config, configDispatch] = useReducer(configReducer, configState);
+  
+  /* const config = useConfigValue();
+  const configDispatch = ()=>{} */
+
   const { isLoaded } = useToggleStyle(
     config.isRTL,
     config.isDark,
@@ -46,7 +46,7 @@ const Main = props => {
   );
 
   const setConfig = (key, value) => {
-    /* configDispatch({
+    configDispatch({
       type: 'SET_CONFIG',
       payload: {
         key,
@@ -60,10 +60,9 @@ const Main = props => {
           'navbarStyle'
         ].includes(key)
       }
-    }); */
+    });
   };
-
-/*   if (!isLoaded) {
+  if (!isLoaded) {
     return (
       <div
         style={{
@@ -76,7 +75,7 @@ const Main = props => {
         }}
       />
     );
-  } */
+  } 
 
   return (
     <AppContext.Provider value={{ config, setConfig, configDispatch }}>

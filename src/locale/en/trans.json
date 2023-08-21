@@ -1,11 +1,21 @@
 {
-    "button": {
+  "site_map": {
+    "dashboard": "Dashboard",
+    "employees": "Employees",
+    "leaves": "Leaves",
+    "shift_roster": "Shift Roster",
+    "attendance": "Attendance",
+    "holiday": "Holiday",
+    "designation": "Designation",
+    "department": "Department",
+    "appreciation": "Appreciation"
+  },
+  "lang": "English",
+  "total_order": "Total Order",
+  "button": {
     "search": "Search",
     "cancel": "Cancel",
     "delete": "Delete",
     "save": "Save"
-    },
-    "lang": "English",
-    "total_order" : "Total Order"
-    
   }
+}

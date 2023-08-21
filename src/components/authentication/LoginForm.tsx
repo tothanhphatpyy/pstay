@@ -2,11 +2,14 @@ import Divider from '@components/common/Divider';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import SocialAuthButtons from './SocialAuthButtons';
+import { useAuth } from '@atom/auth';
 
 const LoginForm = ({ hasLabel, layout }) => {
+  const {state: urlReturn} = useLocation();
+  const { loginWeb } = useAuth();
   // State
   const [formData, setFormData] = useState({
     email: '',
@@ -20,6 +23,7 @@ const LoginForm = ({ hasLabel, layout }) => {
     toast.success(`Logged in as ${formData.email}`, {
       theme: 'colored'
     });
+    loginWeb(formData, urlReturn);
   };
 
   const handleFieldChange = e => {

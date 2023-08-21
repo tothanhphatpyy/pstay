@@ -3,7 +3,7 @@ export const dashboardRoutes = {
   labelDisable: true,
   children: [
     {
-      name: 'Dashboard',
+      name: 'site_map.dashboard',
       active: true,
       icon: 'chart-pie',
       children: [
@@ -13,7 +13,7 @@ export const dashboardRoutes = {
           exact: true,
           active: true
         },
-        {
+        /* {
           name: 'Analytics',
           to: '/dashboard/analytics',
           active: true
@@ -55,28 +55,28 @@ export const dashboardRoutes = {
             type: 'success',
             text: 'New'
           }
-        }
+        } */
       ]
     }
   ]
 };
 export const appRoutes = {
-  label: 'app',
+  label: 'HRM',
   children: [
     {
-      name: 'Calendar',
+      name: 'site_map.employees',
       icon: 'calendar-alt',
-      to: '/app/calendar',
+      to: '/hrm/employees',
       active: true
     },
     {
-      name: 'Chat',
+      name: 'site_map.leaves',
       icon: 'comments',
-      to: '/app/chat',
+      to: '/hrm/leaves',
       active: true
     },
     {
-      name: 'Email',
+      name: 'site_map.shift_roster',
       icon: 'envelope-open',
       active: true,
       children: [
@@ -98,7 +98,7 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'Events',
+      name: 'site_map.attendance',
       icon: 'calendar-day',
       active: true,
       children: [
@@ -120,7 +120,7 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'E Commerce',
+      name: 'site_map.holiday',
       icon: 'shopping-cart',
       active: true,
       children: [
@@ -199,7 +199,7 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'E Learning',
+      name: 'site_map.designation',
       icon: 'graduation-cap',
       active: true,
       badge: {
@@ -246,13 +246,13 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'Kanban',
+      name: 'site_map.department',
       icon: ['fab', 'trello'],
       to: '/app/kanban',
       active: true
     },
     {
-      name: 'Social',
+      name: 'site_map.appreciation',
       icon: 'share-alt',
       active: true,
       children: [
@@ -278,48 +278,7 @@ export const appRoutes = {
         }
       ]
     },
-    {
-      name: 'Support desk',
-      icon: 'ticket-alt',
-      active: true,
-      children: [
-        {
-          name: 'Table view',
-          to: '/support-desk/table-view',
-          active: true
-        },
-        {
-          name: 'Card view',
-          to: '/support-desk/card-view',
-          active: true
-        },
-        {
-          name: 'Contacts',
-          to: '/support-desk/contacts',
-          active: true
-        },
-        {
-          name: 'Contact details',
-          to: '/support-desk/contact-details',
-          active: true
-        },
-        {
-          name: 'Tickets preview',
-          to: '/support-desk/tickets-preview',
-          active: true
-        },
-        {
-          name: 'Quick links',
-          to: '/support-desk/quick-links',
-          active: true
-        },
-        {
-          name: 'Reports',
-          to: '/support-desk/reports',
-          active: true
-        }
-      ]
-    }
+    
   ]
 };
 
@@ -1310,5 +1269,5 @@ export default [
   appRoutes,
   pagesRoutes,
   modulesRoutes,
-  documentationRoutes
+  documentationRoutes,
 ];
