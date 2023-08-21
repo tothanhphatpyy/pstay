@@ -4,7 +4,7 @@ export const dashboardRoutes = {
   labelDisable: true,
   children: [
     {
-      name: `${i18n.t('search')}`,
+      name: 'site_map.dashboard',
       active: true,
       icon: 'chart-pie',
       /* children: [
@@ -62,22 +62,22 @@ export const dashboardRoutes = {
   ]
 };
 export const appRoutes = {
-  label: 'Nhân viên',
+  label: 'HRM',
   children: [
     {
-      name: 'Calendar',
+      name: 'site_map.employees',
       icon: 'calendar-alt',
       to: '/app/calendar',
       active: true
     },
     {
-      name: 'Chat',
+      name: 'site_map.leaves',
       icon: 'comments',
       to: '/app/chat',
       active: true
     },
     {
-      name: 'Email',
+      name: 'site_map.shift_roster',
       icon: 'envelope-open',
       active: true,
       children: [
@@ -99,7 +99,7 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'Events',
+      name: 'site_map.attendance',
       icon: 'calendar-day',
       active: true,
       children: [
@@ -121,7 +121,7 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'E Commerce',
+      name: 'site_map.holiday',
       icon: 'shopping-cart',
       active: true,
       children: [
@@ -200,7 +200,7 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'E Learning',
+      name: 'site_map.designation',
       icon: 'graduation-cap',
       active: true,
       badge: {
@@ -247,13 +247,13 @@ export const appRoutes = {
       ]
     },
     {
-      name: 'Kanban',
+      name: 'site_map.department',
       icon: ['fab', 'trello'],
       to: '/app/kanban',
       active: true
     },
     {
-      name: 'Social',
+      name: 'site_map.appreciation',
       icon: 'share-alt',
       active: true,
       children: [
@@ -279,48 +279,7 @@ export const appRoutes = {
         }
       ]
     },
-    {
-      name: 'Support desk',
-      icon: 'ticket-alt',
-      active: true,
-      children: [
-        {
-          name: 'Table view',
-          to: '/support-desk/table-view',
-          active: true
-        },
-        {
-          name: 'Card view',
-          to: '/support-desk/card-view',
-          active: true
-        },
-        {
-          name: 'Contacts',
-          to: '/support-desk/contacts',
-          active: true
-        },
-        {
-          name: 'Contact details',
-          to: '/support-desk/contact-details',
-          active: true
-        },
-        {
-          name: 'Tickets preview',
-          to: '/support-desk/tickets-preview',
-          active: true
-        },
-        {
-          name: 'Quick links',
-          to: '/support-desk/quick-links',
-          active: true
-        },
-        {
-          name: 'Reports',
-          to: '/support-desk/reports',
-          active: true
-        }
-      ]
-    }
+    
   ]
 };
 
@@ -1305,62 +1264,6 @@ export const documentationRoutes = {
     }
   ]
 };
-export const valonRoutes = {
-  label: 'vai',
-  children: [
-    {
-      name: 'Getting started',
-      icon: 'rocket',
-      to: '/documentation/getting-started',
-      active: true
-    },
-    {
-      name: 'Customization',
-      active: true,
-      icon: 'wrench',
-      children: [
-        {
-          name: 'Configuration',
-          to: '/documentation/configuration',
-          active: true
-        },
-        {
-          name: 'Styling',
-          to: '/documentation/styling',
-          active: true
-        },
-        {
-          name: 'Dark mode',
-          to: '/documentation/dark-mode',
-          active: true
-        },
-        {
-          name: 'Plugin',
-          to: '/documentation/plugin',
-          active: true
-        }
-      ]
-    },
-    {
-      name: 'Faq',
-      icon: 'question-circle',
-      to: '/documentation/faq',
-      active: true
-    },
-    {
-      name: 'Design file',
-      icon: 'palette',
-      to: '/documentation/design-file',
-      active: true
-    },
-    {
-      name: 'Changelog',
-      icon: 'code-branch',
-      to: '/changelog',
-      active: true
-    }
-  ]
-};
 
 export default [
   dashboardRoutes,
@@ -1368,5 +1271,4 @@ export default [
   pagesRoutes,
   modulesRoutes,
   documentationRoutes,
-  valonRoutes
 ];

@@ -12,7 +12,7 @@ interface ConfigState {
   topNavbarBreakpoint: string;
   isFluid: boolean;
   isRTL: boolean;
-  isDark: boolean | null;
+  isDark: boolean | null | string;
   navbarPosition: string;
   disabledNavbarPosition: string[];
   isNavbarVerticalCollapsed: boolean;
@@ -31,7 +31,7 @@ const CONFIG_STATE = atom<ConfigState>({
     topNavbarBreakpoint: "lg",
     isFluid: true,
     isRTL: false,
-    isDark : JSON.parse(localStorage.getItem("isDark")) ?? false,
+    isDark : localStorage.getItem("isDark") ?? false,
     navbarPosition: "vertical",
     disabledNavbarPosition: [],
     isNavbarVerticalCollapsed: false,

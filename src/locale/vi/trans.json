@@ -1,10 +1,21 @@
 {
+  "site_map": {
+    "dashboard": "Trang quản trị",
+    "employees": "Nhân viên",
+    "leaves": "Nghỉ phép",
+    "shift_roster": "Lịch làm việc",
+    "attendance": "Chấm công",
+    "holiday": "Ngày nghỉ",
+    "designation": "Cơ cấu tổ chức",
+    "department": "Phòng ban",
+    "appreciation": "Đánh giá"
+  },
+  "lang": "Tiếng Việt",
+  "total_order" : "Tổng số order",
   "button": {
     "search": "Tìm kiếm",
     "cancel": "Hủy",
     "delete": "Xóa",
     "save": "Lưu"
-  },
-  "lang": "Tiếng Việt",
-  "total_order" : "Tổng số order"
+  }
 }
