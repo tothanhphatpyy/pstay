@@ -7,10 +7,15 @@ import { useNavigate } from "react-router-dom";
 import { isTokenValid } from "@services/tokenManager";
 import { StorageKey, getDataToStorage, removeDataToStorage, setDataToStorage } from "@services/storage";
 
-const AUTH_STATE = atom({
+interface AuthState {
+    token: string | null,
+    tokenIsValid: boolean
+  }
+
+const AUTH_STATE = atom<AuthState>({
     key: 'AUTH_STATE', // unique ID (with respect to other atoms/selectors)
     default: {
-        token: JSON.parse(localStorage.getItem(StorageKey.Authen)),
+        token: localStorage.getItem(StorageKey.Authen),
         tokenIsValid: isTokenValid(),
     },
 });

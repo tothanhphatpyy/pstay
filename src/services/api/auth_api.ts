@@ -2,7 +2,7 @@ import { getAccessToken } from '@services/tokenManager';
 import { ApiUtils } from './index';
 import { PATH } from './path';
 
-export const signUpWebApi = async (data) => {
+export const signUpWebApi = async (data: any) => {
     return await ApiUtils.post(PATH.sign_up_web, data);
 }
 

@@ -13,7 +13,6 @@ ChartJS.register(...registerables);
 
 const Main = props => {
   const { getProfileUser } = useUserInfo();
-  const infoUser = useUserValue();
   useEffect(() => {
     getProfileUser();
   },[])
@@ -63,7 +62,6 @@ const Main = props => {
       }
     });
   };
-  console.log(isLoaded);
   if (!isLoaded) {
     return (
       <div

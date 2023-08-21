@@ -1,17 +1,13 @@
-import Dashboard from "@/components/dashboard/default";
-import MainLayout from "@/layouts/MainLayout";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
+import SplitLogin from "@components/authentication/split/Login";
 
 const HRMLayout = () => {
   return (
-      <Routes>
-        <Route element={<MainLayout />}>
-            <Route path="/" element={<Dashboard />} />
-        </Route>
-      </Routes>
+    <Routes>
+      <Route path="employees" element={<SplitLogin />} />
+    </Routes>
   );
 };
 
-export default HRMLayout
+export default HRMLayout;

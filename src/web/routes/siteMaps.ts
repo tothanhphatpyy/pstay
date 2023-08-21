@@ -1,4 +1,3 @@
-import i18n from "@i18n";
 export const dashboardRoutes = {
   label: 'Dashboard',
   labelDisable: true,
@@ -7,14 +6,14 @@ export const dashboardRoutes = {
       name: 'site_map.dashboard',
       active: true,
       icon: 'chart-pie',
-      /* children: [
+      children: [
         {
           name: 'Default',
           to: '/',
           exact: true,
           active: true
         },
-        {
+        /* {
           name: 'Analytics',
           to: '/dashboard/analytics',
           active: true
@@ -56,8 +55,8 @@ export const dashboardRoutes = {
             type: 'success',
             text: 'New'
           }
-        }
-      ] */
+        } */
+      ]
     }
   ]
 };
@@ -67,13 +66,13 @@ export const appRoutes = {
     {
       name: 'site_map.employees',
       icon: 'calendar-alt',
-      to: '/app/calendar',
+      to: '/hrm/employees',
       active: true
     },
     {
       name: 'site_map.leaves',
       icon: 'comments',
-      to: '/app/chat',
+      to: '/hrm/leaves',
       active: true
     },
     {
