@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Dropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import AppContext from '@context/Context';
+import { useConfigValue } from '@atom/config_app';
 
 const CardDropdown = ({
   btnRevealClass,
@@ -11,9 +11,7 @@ const CardDropdown = ({
   children,
   icon = 'ellipsis-h'
 }) => {
-  const {
-    config: { isRTL }
-  } = useContext(AppContext);
+  const { isRTL } = useConfigValue();
 
   return (
     <Dropdown

@@ -38,7 +38,7 @@ export const useUserInfo = () => {
   const getProfileUser = () => {
     if (!userData.xid) {
       getProfile()
-        .then((res) => {
+        .then((res: any) => {
           console.log(res);
           setUserState(res.data.user);
         })

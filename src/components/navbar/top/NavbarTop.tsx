@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Navbar, Nav } from 'react-bootstrap';
 import classNames from 'classnames';
-import AppContext from '@context/Context';
 import Logo from '@components/common/Logo';
 import SearchBox from './SearchBox';
 import NavbarTopDropDownMenus from './NavbarTopDropDownMenus';
@@ -10,12 +9,11 @@ import { navbarBreakPoint, topNavbarBreakpoint } from '@config';
 import autoCompleteInitialItem from '@data/autocomplete/autocomplete';
 import TopNavRightSideNavItem from './TopNavRightSideNavItem';
 import { useLocation } from 'react-router-dom';
+import { useConfigState } from '@atom/config_app';
 
 const NavbarTop = () => {
-  const {
-    config: { showBurgerMenu, navbarPosition, navbarCollapsed },
-    setConfig
-  } = useContext(AppContext);
+  
+  const [config, setConfig] = useConfigState()
 
   const { pathname } = useLocation();
   const isChat = pathname.includes('chat');
@@ -23,10 +21,10 @@ const NavbarTop = () => {
   const [showDropShadow, setShowDropShadow] = useState(false);
 
   const handleBurgerMenu = () => {
-    (navbarPosition === 'top' || navbarPosition === 'double-top') &&
-      setConfig('navbarCollapsed', !navbarCollapsed);
-    (navbarPosition === 'vertical' || navbarPosition === 'combo') &&
-      setConfig('showBurgerMenu', !showBurgerMenu);
+    (config.navbarPosition === 'top' || config.navbarPosition === 'double-top') &&
+      setConfig({...config, navbarCollapsed: !config.navbarCollapsed});
+    (config.navbarPosition === 'vertical' || config.navbarPosition === 'combo') &&
+      setConfig({...config, showBurgerMenu: !config.showBurgerMenu});
   };
 
   const setDropShadow = () => {
@@ -52,25 +50,25 @@ const NavbarTop = () => {
         'navbar-glass-shadow': showDropShadow && !isChat
       })}
       expand={
-        navbarPosition === 'top' ||
-        navbarPosition === 'combo' ||
-        navbarPosition === 'double-top'
-          ? topNavbarBreakpoint
+        config.navbarPosition === 'top' ||
+        config.navbarPosition === 'combo' ||
+        config.navbarPosition === 'double-top'
+          ? config.topNavbarBreakpoint
           : true
       }
     >
-      {navbarPosition === 'double-top' ? (
+      {config.navbarPosition === 'double-top' ? (
         <div className="w-100">
           <div className="d-flex flex-between-center">
             <NavbarTopElements
-              navbarCollapsed={navbarCollapsed}
-              navbarPosition={navbarPosition}
+              navbarCollapsed={config.navbarCollapsed}
+              navbarPosition={config.navbarPosition}
               handleBurgerMenu={handleBurgerMenu}
               burgerMenuRef={burgerMenuRef}
             />
           </div>
           <hr className="my-2 d-none d-lg-block" />
-          <Navbar.Collapse in={navbarCollapsed} className="scrollbar py-2">
+          <Navbar.Collapse in={config.navbarCollapsed} className="scrollbar py-2">
             <Nav navbar>
               <NavbarTopDropDownMenus />
             </Nav>
@@ -78,8 +76,8 @@ const NavbarTop = () => {
         </div>
       ) : (
         <NavbarTopElements
-          navbarCollapsed={navbarCollapsed}
-          navbarPosition={navbarPosition}
+          navbarCollapsed={config.navbarCollapsed}
+          navbarPosition={config.navbarPosition}
           handleBurgerMenu={handleBurgerMenu}
           burgerMenuRef={burgerMenuRef}
         />

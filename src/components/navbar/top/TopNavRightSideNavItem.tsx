@@ -2,18 +2,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CartNotification from '@components/navbar/top/CartNotification';
 import NotificationDropdown from '@components/navbar/top/NotificationDropdown';
 import ProfileDropdown from '@components/navbar/top/ProfileDropdown';
-import AppContext from '@context/Context';
 import React, { useContext, useState } from 'react';
 import { Nav, OverlayTrigger, Tooltip, NavDropdown } from 'react-bootstrap';
 import NineDotMenu from './NineDotMenu';
 import { handleLocale, localeDefault } from '@helpers/config/locale';
+import { useConfigState } from '@atom/config_app';
+import { StorageKey } from '@services/storage';
 
 const TopNavRightSideNavItem = () => {
-  const {
-    config: { isDark, isRTL },
-    setConfig
-  } = useContext(AppContext);
+
   const [locale, setLocale] = useState(localeDefault());
+  const [config, setConfig] = useConfigState();
   return (
     <Nav
       navbar
@@ -29,20 +28,23 @@ const TopNavRightSideNavItem = () => {
       <Nav.Item as={'li'}>
         <Nav.Link
           className="px-2 theme-control-toggle"
-          onClick={() => setConfig('isDark', !isDark)}
+          onClick={() => {
+            setConfig({...config, isDark: !config.isDark })
+            localStorage.setItem("isDark", JSON.stringify(!config.isDark));
+          }}
         >
           <OverlayTrigger
             key="left"
-            placement={isRTL ? 'bottom' : 'left'}
+            placement={config.isRTL ? 'bottom' : 'left'}
             overlay={
               <Tooltip style={{ position: 'fixed' }} id="ThemeColor">
-                {isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+                {config.isDark ? 'Switch to light theme' : 'Switch to dark theme'}
               </Tooltip>
             }
           >
             <div className="theme-control-toggle-label">
               <FontAwesomeIcon
-                icon={isDark ? 'sun' : 'moon'}
+                icon={config.isDark ? 'sun' : 'moon'}
                 className="fs-0"
               />
             </div>

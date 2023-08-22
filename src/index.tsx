@@ -10,7 +10,7 @@ import { DebugObserver } from "./logger";
 import "@helpers/initFA";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-toastify/dist/ReactToastify.min.css";
-import "./assets/scss/theme.scss";
+/* import "./assets/scss/theme.scss"; */
 import "../i18n-config";
 
 if (!window.APP_CONFIG) {

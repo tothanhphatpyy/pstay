@@ -38,7 +38,7 @@ export const useAuth = () => {
 
 
     const loginWeb = (formData, urlReturn) => {
-        signUpWeb(formData).then((res) => {
+        signUpWeb(formData).then((res:any) => {
             setUserState(formData);
             setAuth({token: res.data, tokenIsValid: true});
             setDataToStorage(StorageKey.Authen, res.data.token)

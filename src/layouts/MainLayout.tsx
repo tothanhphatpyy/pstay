@@ -1,21 +1,19 @@
 import React, { useContext, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import AppContext from '@context/Context';
 import classNames from 'classnames';
 import NavbarTop from '@components/navbar/top/NavbarTop';
 import NavbarVertical from '@components/navbar/vertical/NavbarVertical';
 import Footer from '@components/footer/Footer';
 import ProductProvider from '@components/app/e-commerce/ProductProvider';
 import CourseProvider from '@components/app/e-learning/CourseProvider';
+import { useConfigValue } from '@atom/config_app';
 
 const MainLayout = () => {
   const { hash, pathname } = useLocation();
   const isKanban = pathname.includes('kanban');
   // const isChat = pathname.includes('chat');
 
-  const {
-    config: { isFluid, navbarPosition }
-  } = useContext(AppContext);
+  const { isFluid, navbarPosition } = useConfigValue();
 
   useEffect(() => {
     setTimeout(() => {

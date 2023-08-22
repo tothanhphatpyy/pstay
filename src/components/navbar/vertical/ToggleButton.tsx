@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import AppContext from '@context/Context';
+import { useConfigState } from '@atom/config_app';
 
 const renderTooltip = props => (
   <Tooltip style={{ position: 'fixed' }} id="button-tooltip" {...props}>
@@ -9,22 +9,20 @@ const renderTooltip = props => (
 );
 
 const ToggleButton = () => {
-  const {
-    config: { isNavbarVerticalCollapsed, isFluid, isRTL },
-    setConfig
-  } = useContext(AppContext);
+
+  const [config, setConfig] = useConfigState();
 
   const handleClick = () => {
     document
       .getElementsByTagName('html')[0]
       .classList.toggle('navbar-vertical-collapsed');
-    setConfig('isNavbarVerticalCollapsed', !isNavbarVerticalCollapsed);
+    setConfig({...config, isNavbarVerticalCollapsed: !config.isNavbarVerticalCollapsed});
   };
 
   return (
     <OverlayTrigger
       placement={
-        isFluid ? (isRTL ? 'bottom' : 'right') : isRTL ? 'bottom' : 'left'
+        config.isFluid ? (config.isRTL ? 'bottom' : 'right') : config.isRTL ? 'bottom' : 'left'
       }
       overlay={renderTooltip}
     >

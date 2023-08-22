@@ -1,43 +1,22 @@
 import React, { useEffect, useReducer } from 'react';
 import PropTypes from 'prop-types';
-import AppContext from '@context/Context';
-import { settings } from './config';
 import { getColor, getItemFromStore } from '@helpers/utils';
-import { configReducer } from './reducers/configReducer';
 import useToggleStyle from './hooks/useToggleStyle';
 
 import { Chart as ChartJS, registerables } from 'chart.js';
 import { useConfigValue } from './atom/config_app';
 import { useUserInfo, useUserValue } from './atom/user_info';
+import { useMount } from 'ahooks';
 ChartJS.register(...registerables);
 
 const Main = props => {
   const { getProfileUser } = useUserInfo();
-  useEffect(() => {
+  useMount(() => {
     getProfileUser();
-  },[])
-
-  const configState = {
-    isFluid: getItemFromStore('isFluid', settings.isFluid),
-    isRTL: getItemFromStore('isRTL', settings.isRTL),
-    isDark: getItemFromStore('isDark', settings.isDark),
-    navbarPosition: getItemFromStore('navbarPosition', settings.navbarPosition),
-    disabledNavbarPosition: [],
-    isNavbarVerticalCollapsed: getItemFromStore(
-      'isNavbarVerticalCollapsed',
-      settings.isNavbarVerticalCollapsed
-    ),
-    navbarStyle: getItemFromStore('navbarStyle', settings.navbarStyle),
-    currency: settings.currency,
-    showBurgerMenu: settings.showBurgerMenu,
-    showSettingPanel: false,
-    navbarCollapsed: false
-  };
-
-  const [config, configDispatch] = useReducer(configReducer, configState);
+  });
   
-  /* const config = useConfigValue();
-  const configDispatch = ()=>{} */
+  const config = useConfigValue();
+  const configDispatch = ()=>{}
 
   const { isLoaded } = useToggleStyle(
     config.isRTL,
@@ -45,23 +24,6 @@ const Main = props => {
     configDispatch
   );
 
-  const setConfig = (key, value) => {
-    configDispatch({
-      type: 'SET_CONFIG',
-      payload: {
-        key,
-        value,
-        setInStore: [
-          'isFluid',
-          'isRTL',
-          'isDark',
-          'navbarPosition',
-          'isNavbarVerticalCollapsed',
-          'navbarStyle'
-        ].includes(key)
-      }
-    });
-  };
   if (!isLoaded) {
     return (
       <div
@@ -78,9 +40,9 @@ const Main = props => {
   } 
 
   return (
-    <AppContext.Provider value={{ config, setConfig, configDispatch }}>
+    <div>
       {props.children}
-    </AppContext.Provider>
+    </div>
   );
 };
 

@@ -2,8 +2,6 @@ import React, { useContext, useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Nav, Navbar, Row, Col } from 'react-bootstrap';
-import { navbarBreakPoint, topNavbarBreakpoint } from '@config';
-import AppContext from '@context/Context';
 import Flex from '@components/common/Flex';
 import Logo from '@components/common/Logo';
 import NavbarVerticalMenu from './NavbarVerticalMenu';
@@ -13,16 +11,16 @@ import { capitalize } from '@helpers/utils';
 import NavbarTopDropDownMenus from '@components/navbar/top/NavbarTopDropDownMenus';
 import PurchaseCard from './PurchaseCard';
 import bgNavbar from '@assets/img/generic/bg-navbar.png';
+import { useConfigValue } from '@atom/config_app';
 
 const NavbarVertical = () => {
-  const {
-    config: {
-      navbarPosition,
-      navbarStyle,
-      isNavbarVerticalCollapsed,
-      showBurgerMenu
-    }
-  } = useContext(AppContext);
+
+  const { navbarPosition,
+    navbarStyle,
+    isNavbarVerticalCollapsed,
+    showBurgerMenu, navbarBreakPoint, 
+    topNavbarBreakpoint
+   } = useConfigValue();
 
   const HTMLClassList = document.getElementsByTagName('html')[0].classList;
 
