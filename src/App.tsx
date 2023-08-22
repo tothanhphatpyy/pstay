@@ -16,8 +16,8 @@ const App = () => {
       if (!isZalo && port !== "2999") {
         // phát triển web
         setPlatform("web");
-        setloading(false);
       }
+      setloading(false);
     };
 
     checkPlatform();

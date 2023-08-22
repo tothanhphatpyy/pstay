@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-// import { CloseButton } from "components/common/Toast";
-// import { ToastContainer, toast } from "react-toastify";
+import { CloseButton } from "@components/common/Toast";
+import { ToastContainer, toast } from "react-toastify";
 import ZaloRoutes from "./routes";
 
 const ZaloRoot = () => {
@@ -12,11 +12,11 @@ const ZaloRoot = () => {
       }
     >
       <ZaloRoutes />
-      {/* <ToastContainer
+      <ToastContainer
         closeButton={CloseButton}
         icon={false}
         position={toast.POSITION.BOTTOM_LEFT}
-      /> */}
+      />
     </BrowserRouter>
   );
 };

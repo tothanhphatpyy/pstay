@@ -15,9 +15,9 @@
     "Samsung >= 5"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "start": "zmp start",
+    "start": "vite",
+    "zalo": "zmp start",
     "deploy": "zmp deploy"
   },
   "dependencies": {
