@@ -27,6 +27,30 @@ import RunningProjects from './RunningProjects';
 // import BandwidthSaved from './BandwidthSaved';
 // import TopProducts from './TopProducts';
 import Weather from './Weather';
+import DigiBirdComponentCard from '@components/common/DigiBirdComponentCard';
+
+import generic1 from '@assets/img/generic/1.jpg';
+const exampleCode = `<div className="d-flex justify-content-center flex-wrap gap-3">
+
+  <Card style={{ width: '20rem' }} className='overflow-hidden'>
+    <Card.Header variant="top" style={{width: 320,height: 180}} className='p-0'>
+      <span className="placeholder w-100 h-100"/>
+    </Card.Header>
+    <Card.Body>
+      <Placeholder as={Card.Title} animation="glow" className='mb-2'>
+        <Placeholder xs={6} />
+      </Placeholder>
+      <Placeholder as={Card.Text} animation="glow">
+        <Placeholder xs={7} /> 
+        <Placeholder xs={4} /> 
+        <Placeholder xs={4} />
+        <Placeholder xs={6} /> 
+        <Placeholder xs={8} />
+      </Placeholder>
+      <Placeholder.Button variant="primary" xs={6} />
+    </Card.Body>
+  </Card>
+</div>`;
 
 const Dashboard = () => {
   return (
@@ -54,6 +78,13 @@ const Dashboard = () => {
           <TotalSales data={totalSales} />
         </Col>
       </Row>
+      <DigiBirdComponentCard>
+      <DigiBirdComponentCard.Body
+        code={exampleCode}
+        scope={{ generic1 }}
+        language="jsx"
+      />
+      </DigiBirdComponentCard>
 
       {/* <Row className="g-3 mb-3">
         <Col lg={6} xl={7} xxl={8}>

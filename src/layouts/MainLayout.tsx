@@ -6,14 +6,14 @@ import NavbarVertical from '@components/navbar/vertical/NavbarVertical';
 import Footer from '@components/footer/Footer';
 import ProductProvider from '@components/app/e-commerce/ProductProvider';
 import CourseProvider from '@components/app/e-learning/CourseProvider';
-import { useConfigValue } from '@atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
 
 const MainLayout = () => {
   const { hash, pathname } = useLocation();
   const isKanban = pathname.includes('kanban');
   // const isChat = pathname.includes('chat');
 
-  const { isFluid, navbarPosition } = useConfigValue();
+  const { config } = useConfig();
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,8 +32,8 @@ const MainLayout = () => {
   }, [pathname]);
 
   return (
-    <div className={isFluid ? 'container-fluid' : 'container'}>
-      {(navbarPosition === 'vertical' || navbarPosition === 'combo') && (
+    <div className={config.isFluid ? 'container-fluid' : 'container'}>
+      {(config.navbarPosition === 'vertical' || config.navbarPosition === 'combo') && (
         <NavbarVertical />
       )}
       <ProductProvider>

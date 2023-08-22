@@ -1,12 +1,9 @@
 import { useRequest } from "ahooks";
 import {
   atom,
-  useRecoilState,
-  useRecoilValue,
-  useSetRecoilState,
 } from "recoil";
 
-interface ConfigState {
+interface IConfig {
   version: string;
   navbarBreakPoint: string;
   topNavbarBreakpoint: string;
@@ -23,8 +20,8 @@ interface ConfigState {
   navbarCollapsed: boolean;
 }
 
-const CONFIG_STATE = atom<ConfigState>({
-  key: "CONFIG_STATE", // unique ID (with respect to other atoms/selectors)
+export const configAtom = atom<IConfig>({
+  key: "CONFIG", // unique ID (with respect to other atoms/selectors)
   default: {
     version: "4.2.0",
     navbarBreakPoint: "xl", // Vertical navbar breakpoint
@@ -42,8 +39,3 @@ const CONFIG_STATE = atom<ConfigState>({
     navbarCollapsed: false
   },
 });
-export const useConfigState = () => useRecoilState(CONFIG_STATE);
-
-export const useConfigValue = () => useRecoilValue(CONFIG_STATE);
-
-export const useConfigSetValue = () => useSetRecoilState(CONFIG_STATE);

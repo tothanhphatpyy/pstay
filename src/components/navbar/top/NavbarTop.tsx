@@ -9,11 +9,11 @@ import { navbarBreakPoint, topNavbarBreakpoint } from '@config';
 import autoCompleteInitialItem from '@data/autocomplete/autocomplete';
 import TopNavRightSideNavItem from './TopNavRightSideNavItem';
 import { useLocation } from 'react-router-dom';
-import { useConfigState } from '@atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
 
 const NavbarTop = () => {
   
-  const [config, setConfig] = useConfigState()
+  const {config, setConfig} = useConfig();
 
   const { pathname } = useLocation();
   const isChat = pathname.includes('chat');

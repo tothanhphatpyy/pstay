@@ -1,11 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { v4 as uuid } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
-import { useConfigValue } from '@/atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
 
 const AddScheduleModal = ({
   setIsOpenScheduleModal,
@@ -18,7 +18,7 @@ const AddScheduleModal = ({
   setScheduleEndDate
 }) => {
 
-  const { isDark } = useConfigValue();
+  const { config } = useConfig();
 
   const [formData, setFormData] = useState({});
 
@@ -59,7 +59,7 @@ const AddScheduleModal = ({
       <Form onSubmit={handleSubmit}>
         <Modal.Header
           closeButton
-          closeVariant={isDark ? 'white' : undefined}
+          closeVariant={config.isDark ? 'white' : undefined}
           className="bg-light px-x1 border-bottom-0"
         >
           <Modal.Title as="h5"> Create Schedule</Modal.Title>

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Dropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import { useConfigValue } from '@atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
+
 
 const CardDropdown = ({
   btnRevealClass,
@@ -11,12 +12,12 @@ const CardDropdown = ({
   children,
   icon = 'ellipsis-h'
 }) => {
-  const { isRTL } = useConfigValue();
+  const { config } = useConfig();
 
   return (
     <Dropdown
       className="font-sans-serif btn-reveal-trigger"
-      align={isRTL ? 'start' : 'end'}
+      align={config.isRTL ? 'start' : 'end'}
       drop={drop}
     >
       <Dropdown.Toggle

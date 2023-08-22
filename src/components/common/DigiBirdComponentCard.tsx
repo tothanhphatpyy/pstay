@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 import Flex from './Flex';
 import { useLocation } from 'react-router-dom';
 import { camelize } from '../../helpers/utils';
-import AppContext from 'context/Context';
+import { useConfig } from '@atom/config/useConfig';
 
 const PreviewCode = () => {
   return (
@@ -38,9 +38,7 @@ const DigiBirdComponentCardHeader = ({
   noPreview
 }) => {
   const location = useLocation();
-  const {
-    config: { isRTL }
-  } = useContext(AppContext);
+  const { config } = useConfig();
   return (
     <Card.Header className={classNames({ 'bg-light': light }, className)}>
       <Row
@@ -56,7 +54,7 @@ const DigiBirdComponentCardHeader = ({
                 className="mb-0 hover-actions-trigger text-truncate text-nowrap"
                 id={camelize(title)}
               >
-                {isRTL ? (
+                {config.isRTL ? (
                   <>
                     <HashLink
                       to={`${location.pathname}#${camelize(title)}`}

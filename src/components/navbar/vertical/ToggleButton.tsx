@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { useConfigState } from '@atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
 
 const renderTooltip = props => (
   <Tooltip style={{ position: 'fixed' }} id="button-tooltip" {...props}>
@@ -10,7 +10,7 @@ const renderTooltip = props => (
 
 const ToggleButton = () => {
 
-  const [config, setConfig] = useConfigState();
+  const {config, setConfig} = useConfig();
 
   const handleClick = () => {
     document
