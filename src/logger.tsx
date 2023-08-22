@@ -17,7 +17,7 @@ export const DebugObserver: React.FC<IProps> = ({ type = "object" }) => {
         nextState?: object;
         prevState?: object;
         date?: Date;
-      } = [].concat.apply([], Array.from(nodes))[0];
+      } = [].concat.apply([], Array.from(nodes as any))[0];
       if (node && node.prevState && node.nextState && node.date) {
         const { prevState, nextState, date } = node;
         const p =

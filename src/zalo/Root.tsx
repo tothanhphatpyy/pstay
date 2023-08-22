@@ -4,6 +4,8 @@ import { CloseButton } from "@components/common/Toast";
 import { ToastContainer, toast } from "react-toastify";
 import ZaloRoutes from "./routes";
 
+declare const window: any;
+
 const ZaloRoot = () => {
   return (
     <BrowserRouter

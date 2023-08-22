@@ -1,5 +1,3 @@
-declare const window: any;
-
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
@@ -16,6 +14,8 @@ import "../i18n-config";
 if (!window.APP_CONFIG) {
   window.APP_CONFIG = appConfig;
 }
+
+declare const window: any;
 
 // Mount React App
 const container = document.getElementById("app")!;
