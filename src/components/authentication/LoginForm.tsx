@@ -5,7 +5,7 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import SocialAuthButtons from './SocialAuthButtons';
-import { useAuth } from '@atom/auth';
+import { useAuth } from '@atom/auth/useAuth';
 
 const LoginForm = ({ hasLabel, layout }) => {
   const {state: urlReturn} = useLocation();

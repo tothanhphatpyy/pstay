@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { CloseButton } from 'react-bootstrap';
-import { useConfigValue } from '@atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
 
 const DigiBirdCloseButton = ({
   size,
@@ -12,10 +12,11 @@ const DigiBirdCloseButton = ({
   className,
   ...rest
 }) => {
-  const { isDark } = useConfigValue();
+  const { config } = useConfig();
+
   return (
     <CloseButton
-      variant={variant ? variant : isDark ? 'white' : undefined}
+      variant={variant ? variant : config.isDark ? 'white' : undefined}
       className={classNames('btn', {
         [`btn-${size}`]: size,
         'outline-none': noOutline,

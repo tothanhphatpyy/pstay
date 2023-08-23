@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import { Collapse, Nav } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom';
 import NavbarVerticalMenuItem from './NavbarVerticalMenuItem';
-import { useConfigState } from '@atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
 
 const CollapseItems = ({ route }) => {
   const { pathname } = useLocation();
@@ -58,7 +58,7 @@ CollapseItems.propTypes = {
 
 const NavbarVerticalMenu = ({ routes }) => {
 
-  const [config, setConfig] = useConfigState();
+  const {config, setConfig} = useConfig();
 
   const handleNavItemClick = () => {
     if (config.showBurgerMenu) {

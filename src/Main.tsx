@@ -4,18 +4,12 @@ import { getColor, getItemFromStore } from '@helpers/utils';
 import useToggleStyle from './hooks/useToggleStyle';
 
 import { Chart as ChartJS, registerables } from 'chart.js';
-import { useConfigValue } from './atom/config_app';
-import { useUserInfo, useUserValue } from './atom/user_info';
-import { useMount } from 'ahooks';
+import { useConfig } from '@atom/config/useConfig';
 ChartJS.register(...registerables);
 
 const Main = props => {
-  const { getProfileUser } = useUserInfo();
-  useMount(() => {
-    getProfileUser();
-  });
   
-  const config = useConfigValue();
+  const { config } = useConfig();
   const configDispatch = ()=>{}
 
   const { isLoaded } = useToggleStyle(

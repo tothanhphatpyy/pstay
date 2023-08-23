@@ -6,13 +6,12 @@ import React, { useContext, useState } from 'react';
 import { Nav, OverlayTrigger, Tooltip, NavDropdown } from 'react-bootstrap';
 import NineDotMenu from './NineDotMenu';
 import { handleLocale, localeDefault } from '@helpers/config/locale';
-import { useConfigState } from '@atom/config_app';
-import { StorageKey } from '@services/storage';
+import { useConfig } from '@atom/config/useConfig';
 
 const TopNavRightSideNavItem = () => {
 
   const [locale, setLocale] = useState(localeDefault());
-  const [config, setConfig] = useConfigState();
+  const {config, setConfig} = useConfig();
   return (
     <Nav
       navbar

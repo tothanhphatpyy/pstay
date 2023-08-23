@@ -11,21 +11,16 @@ import { capitalize } from '@helpers/utils';
 import NavbarTopDropDownMenus from '@components/navbar/top/NavbarTopDropDownMenus';
 import PurchaseCard from './PurchaseCard';
 import bgNavbar from '@assets/img/generic/bg-navbar.png';
-import { useConfigValue } from '@atom/config_app';
+import { useConfig } from '@atom/config/useConfig';
 
 const NavbarVertical = () => {
 
-  const { navbarPosition,
-    navbarStyle,
-    isNavbarVerticalCollapsed,
-    showBurgerMenu, navbarBreakPoint, 
-    topNavbarBreakpoint
-   } = useConfigValue();
+  const { config } = useConfig();
 
   const HTMLClassList = document.getElementsByTagName('html')[0].classList;
 
   useEffect(() => {
-    if (isNavbarVerticalCollapsed) {
+    if (config.isNavbarVerticalCollapsed) {
       HTMLClassList.add('navbar-vertical-collapsed');
     } else {
       HTMLClassList.remove('navbar-vertical-collapsed');
@@ -33,12 +28,12 @@ const NavbarVertical = () => {
     return () => {
       HTMLClassList.remove('navbar-vertical-collapsed-hover');
     };
-  }, [isNavbarVerticalCollapsed, HTMLClassList]);
+  }, [config.isNavbarVerticalCollapsed, HTMLClassList]);
 
   //Control mouseEnter event
   let time = null;
   const handleMouseEnter = () => {
-    if (isNavbarVerticalCollapsed) {
+    if (config.isNavbarVerticalCollapsed) {
       time = setTimeout(() => {
         HTMLClassList.add('navbar-vertical-collapsed-hover');
       }, 100);
@@ -64,9 +59,9 @@ const NavbarVertical = () => {
 
   return (
     <Navbar
-      expand={navbarBreakPoint}
+      expand={config.navbarBreakPoint}
       className={classNames('navbar-vertical', {
-        [`navbar-${navbarStyle}`]: navbarStyle !== 'transparent'
+        [`navbar-${config.navbarStyle}`]: config.navbarStyle !== 'transparent'
       })}
       variant="light"
     >
@@ -75,12 +70,12 @@ const NavbarVertical = () => {
         <Logo at="navbar-vertical" width={40} />
       </Flex>
       <Navbar.Collapse
-        in={showBurgerMenu}
+        in={config.showBurgerMenu}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
           backgroundImage:
-            navbarStyle === 'vibrant'
+          config.navbarStyle === 'vibrant'
               ? `linear-gradient(-45deg, rgba(0, 160, 255, 0.86), #0048a2),url(${bgNavbar})`
               : 'none'
         }}
@@ -98,8 +93,8 @@ const NavbarVertical = () => {
           </Nav>
 
           <>
-            {navbarPosition === 'combo' && (
-              <div className={`d-${topNavbarBreakpoint}-none`}>
+            {config.navbarPosition === 'combo' && (
+              <div className={`d-${config.topNavbarBreakpoint}-none`}>
                 <div className="navbar-vertical-divider">
                   <hr className="navbar-vertical-hr my-2" />
                 </div>

@@ -8,21 +8,21 @@ import {
   Tooltip
 } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import IconButton from 'components/common/IconButton';
+import IconButton from '@components/common/IconButton';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
-import events from 'data/calendar/events';
+import events from '@data/calendar/events';
 import AddScheduleModal from './AddScheduleModal';
 import CalendarEventModal from './CalendarEventModal';
-import DropdownFilter from 'components/common/DropdownFilter';
-import { useConfigValue } from '@/atom/config_app';
+import DropdownFilter from '@components/common/DropdownFilter';
+import { useConfig } from '@atom/config/useConfig';
 
 const Calendar = () => {
  
-  const { isRTL } = useConfigValue();
+  const { config } = useConfig();
   const calendarRef = useRef();
   const [title, setTitle] = useState('');
   const [calendarApi, setCalendarApi] = useState({});
@@ -200,7 +200,7 @@ const Calendar = () => {
             initialView="dayGridMonth"
             themeSystem="bootstrap"
             dayMaxEvents={2}
-            direction={isRTL ? 'rtl' : 'ltr'}
+            direction={config.isRTL ? 'rtl' : 'ltr'}
             height={800}
             stickyHeaderDates={false}
             editable
