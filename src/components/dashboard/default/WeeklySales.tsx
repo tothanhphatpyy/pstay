@@ -16,6 +16,12 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Card, OverlayTrigger, Placeholder, Tooltip } from "react-bootstrap";
 
+interface WeeklySalesProps {
+  data: Array<any>;
+  width?: string;
+  amountClassName?: string;
+}
+
 echarts.use([
   TitleComponent,
   TooltipComponent,
@@ -24,7 +30,8 @@ echarts.use([
   CanvasRenderer,
 ]);
 
-const getOptions = (data) => ({
+
+const getOptions = (data: any) => ({
   tooltip: {
     trigger: "axis",
     padding: [7, 10],
@@ -71,7 +78,7 @@ const getOptions = (data) => ({
   grid: { right: 5, left: 10, top: 0, bottom: 0 },
 });
 
-const WeeklySales = ({ data, width, amountClassName }) => {
+const WeeklySales: React.FC<WeeklySalesProps> = ({ data, width, amountClassName }) => {
   return (
     <>
       <Card className="h-md-100">
@@ -121,12 +128,6 @@ const WeeklySales = ({ data, width, amountClassName }) => {
       </Card>
     </>
   );
-};
-
-WeeklySales.propTypes = {
-  data: PropTypes.array.isRequired,
-  width: PropTypes.string,
-  amountClassName: PropTypes.string,
 };
 
 export default WeeklySales;

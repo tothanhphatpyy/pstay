@@ -8,14 +8,7 @@ import Flex from '@components/common/Flex';
 const Login = () => {
   return (
     <>
-    <div>đsfsg</div>
-    </>
-
-  );
-};
-
-export default Login;
-    {/* <AuthSplitLayout bgProps={{ image: bgImg, position: '50% 20%' }}>
+    <AuthSplitLayout bgProps={{ image: bgImg, position: '50% 20%' }}>
       <Flex alignItems="center" justifyContent="between">
         <h3>Login</h3>
         <p className="mb-0 fs--1">
@@ -24,4 +17,11 @@ export default Login;
         </p>
       </Flex>
       <LoginForm layout="split" hasLabel />
-    </AuthSplitLayout> */}
+    </AuthSplitLayout>
+    </>
+
+  );
+};
+
+export default Login;
+    
