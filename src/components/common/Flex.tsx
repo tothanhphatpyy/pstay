@@ -1,8 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Flex = ({
+interface FlexProps {
+  children: React.ReactNode;
+  justifyContent?: string;
+  inline?: boolean;
+  alignItems?: string;
+  alignContent?: string;
+  wrap?: string;
+  className?: string;
+  tag?: string | React.ElementType;
+  breakpoint?: string;
+  direction?: string;
+}
+
+const Flex: React.FC<FlexProps> = ({
   justifyContent,
   alignItems,
   alignContent,
@@ -34,19 +46,6 @@ const Flex = ({
       {children}
     </Tag>
   );
-};
-
-Flex.propTypes = {
-  children: PropTypes.node.isRequired,
-  justifyContent: PropTypes.string,
-  inline: PropTypes.bool,
-  alignItems: PropTypes.string,
-  alignContent: PropTypes.string,
-  wrap: PropTypes.string,
-  className: PropTypes.string,
-  tag: PropTypes.string,
-  breakpoint: PropTypes.string,
-  direction: PropTypes.string
 };
 
 export default Flex;
