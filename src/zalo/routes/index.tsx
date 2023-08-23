@@ -1,17 +1,21 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import SplitLogin from '@components/authentication/split/Login';
-import DashboardLayout from '@web/routes/dashboard';
-import MainLayout from '@layouts/MainLayout';
+import BottomNavigation from './Navigation';
+import Dashboard from '@components/dashboard/default';
 
 const ZaloRoutes = () => {
   return (
+    <div className='container'>
     <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="*" element={<DashboardLayout />} />
-        <Route path="/login" element={<SplitLogin />} />
-      </Route>
+      <Route path="/*" element={<Dashboard />} />
+      <Route path="/notification" element={<SplitLogin />} />
+      <Route path="/cart" element={<Dashboard />} />
+      <Route path="/profile" element={<SplitLogin />} />
+      <Route path="*" element={<Navigate to="/errors/404" replace />} />
     </Routes>
+    <BottomNavigation />
+    </div>
   );
 };
 

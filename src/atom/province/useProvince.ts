@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil"
 import { useMount, useRequest } from "ahooks";
-import { provinceAtom } from "./province/province";
+import { provinceAtom } from "./province";
 import axios from "axios";
 
 export const useProvince= () => {
