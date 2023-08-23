@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
-import is from "is_js";
+// import is from "is_js";    // sử dụng khi phát triển 2 nền tảng
 import Main from "./Main";
-import WebRoot from "./web/Root";
+// import WebRoot from "./web/Root";    // sử dụng khi phát triển 2 nền tảng
 import ZaloRoot from "./zalo/Root";
 
 const App = () => {
-  const [platform, setPlatform] = useState("zalo");
-  const [loading, setloading] = useState(true);
-  const HTMLClassList = document.getElementsByTagName("html")[0].classList;
+  // const [platform, setPlatform] = useState("zalo");     // sử dụng khi phát triển 2 nền tảng
+  // const [loading, setloading] = useState(true); // sử dụng khi phát triển 2 nền tảng
+  // const HTMLClassList = document.getElementsByTagName("html")[0].classList;  // sử dụng khi phát triển 2 nền tảng
 
-  useEffect(() => {
+  // sử dụng dụng khi phát triển 2 nền tảng
+  /* useEffect(() => {
     const checkPlatform = async () => {
       const port = await location.port; // zmp start chạy trên port 3000 -> zaloweb: 2999
       const isZalo = (await navigator.userAgent.indexOf("Zalo")) !== -1; // chạy trên thiết bị thật
@@ -21,9 +22,10 @@ const App = () => {
     };
 
     checkPlatform();
-  }, []);
+  }, []); */
 
-  useEffect(() => {
+  // sử dụng khi phát triển 2 nền tảng
+  /* useEffect(() => {
     if (is.windows()) {
       HTMLClassList.add("windows");
     }
@@ -36,7 +38,7 @@ const App = () => {
     if (is.safari()) {
       HTMLClassList.add("safari");
     }
-  }, [HTMLClassList]);
+  }, [HTMLClassList]); */
 
   /* useEffect(() => {
     if (navbarPosition === 'double-top') {
@@ -45,7 +47,8 @@ const App = () => {
     return () => HTMLClassList.remove('double-top-nav-layout');
   }, [navbarPosition]); */
 
-  if (loading) {
+  // sử dụng dụng khi phát triển 2 nền tảng
+  /* if (loading) {
     return (
       <div
         style={{
@@ -58,9 +61,15 @@ const App = () => {
         }}
       />
     );
-  }
+  } */
 
-  return <Main>{platform === "zalo" ? <ZaloRoot /> : <WebRoot />}</Main>;
+  return (
+    <Main>
+      {/** // sử dụng khi phát triển 2 nền tảng
+      {platform === "zalo" ? <ZaloRoot /> : <WebRoot />} */}
+      <ZaloRoot />
+    </Main>
+  );
 };
 
 export default App;
