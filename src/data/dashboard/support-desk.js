@@ -1,12 +1,12 @@
-import holdTicket from 'assets/img/support-desk/hold-tickets.png';
-import openTicket from 'assets/img/support-desk/open-tickets.png';
-import dueTicket from 'assets/img/support-desk/due-tickets.png';
-import unassigned from 'assets/img/support-desk/unassigned.png';
+import holdTicket from '@assets/img/support-desk/hold-tickets.png';
+import openTicket from '@assets/img/support-desk/open-tickets.png';
+import dueTicket from '@assets/img/support-desk/due-tickets.png';
+import unassigned from '@assets/img/support-desk/unassigned.png';
 
-import person1 from 'assets/img/team/1-thumb.png';
-import person2 from 'assets/img/team/25-thumb.png';
-import person3 from 'assets/img/team/14-thumb.png';
-import person4 from 'assets/img/team/3-thumb.png';
+import person1 from '@assets/img/team/1-thumb.png';
+import person2 from '@assets/img/team/25-thumb.png';
+import person3 from '@assets/img/team/14-thumb.png';
+import person4 from '@assets/img/team/3-thumb.png';
 
 export const statusData = [
   {

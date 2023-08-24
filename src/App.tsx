@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-// import is from "is_js";    // sử dụng khi phát triển 2 nền tảng
+import is from "is_js";    // sử dụng khi phát triển 2 nền tảng
 import Main from "./Main";
-// import WebRoot from "./web/Root";    // sử dụng khi phát triển 2 nền tảng
+import WebRoot from "./web/Root";    // sử dụng khi phát triển 2 nền tảng
 import ZaloRoot from "./zalo/Root";
 
 const App = () => {
-  // const [platform, setPlatform] = useState("zalo");     // sử dụng khi phát triển 2 nền tảng
-  // const [loading, setloading] = useState(true); // sử dụng khi phát triển 2 nền tảng
-  // const HTMLClassList = document.getElementsByTagName("html")[0].classList;  // sử dụng khi phát triển 2 nền tảng
+  const [platform, setPlatform] = useState("zalo");     // sử dụng khi phát triển 2 nền tảng
+  const [loading, setloading] = useState(true); // sử dụng khi phát triển 2 nền tảng
+  const HTMLClassList = document.getElementsByTagName("html")[0].classList;  // sử dụng khi phát triển 2 nền tảng
 
   // sử dụng dụng khi phát triển 2 nền tảng
-  /* useEffect(() => {
+  useEffect(() => {
     const checkPlatform = async () => {
       const port = await location.port; // zmp start chạy trên port 3000 -> zaloweb: 2999
       const isZalo = (await navigator.userAgent.indexOf("Zalo")) !== -1; // chạy trên thiết bị thật
@@ -22,10 +22,10 @@ const App = () => {
     };
 
     checkPlatform();
-  }, []); */
+  }, []);
 
   // sử dụng khi phát triển 2 nền tảng
-  /* useEffect(() => {
+  useEffect(() => {
     if (is.windows()) {
       HTMLClassList.add("windows");
     }
@@ -38,9 +38,9 @@ const App = () => {
     if (is.safari()) {
       HTMLClassList.add("safari");
     }
-  }, [HTMLClassList]); */
+  }, [HTMLClassList]); 
 
-  /* useEffect(() => {
+   /* useEffect(() => {
     if (navbarPosition === 'double-top') {
       HTMLClassList.add('double-top-nav-layout');
     }
@@ -48,7 +48,7 @@ const App = () => {
   }, [navbarPosition]); */
 
   // sử dụng dụng khi phát triển 2 nền tảng
-  /* if (loading) {
+  if (loading) {
     return (
       <div
         style={{
@@ -61,13 +61,12 @@ const App = () => {
         }}
       />
     );
-  } */
+  }
 
   return (
     <Main>
-      {/** // sử dụng khi phát triển 2 nền tảng
-      {platform === "zalo" ? <ZaloRoot /> : <WebRoot />} */}
-      <ZaloRoot />
+      {/* //sử dụng khi phát triển 2 nền tảng */}
+      {platform === "zalo" ? <ZaloRoot /> : <WebRoot />} 
     </Main>
   );
 };

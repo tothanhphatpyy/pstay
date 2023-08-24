@@ -9,7 +9,7 @@ interface IConfig {
   topNavbarBreakpoint: string;
   isFluid: boolean;
   isRTL: boolean;
-  isDark: string | null;
+  isDark: string;
   navbarPosition: string;
   disabledNavbarPosition: string[];
   isNavbarVerticalCollapsed: boolean;

@@ -4,7 +4,17 @@ import Background from '@components/common/Background';
 import { Card, Col, Row, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const AuthSplitLayout = ({ children, bgProps }) => {
+interface BackgroundProps {
+  image: string;
+  position: string;
+}
+
+interface AuthSplitLayoutProps {
+  children: React.ReactNode;
+  bgProps: BackgroundProps;
+}
+
+const AuthSplitLayout: React.FC<AuthSplitLayoutProps> = ({ children, bgProps }) => {
   return (
     <Container fluid>
       <Row className="min-vh-100 bg-100">
@@ -31,11 +41,6 @@ const AuthSplitLayout = ({ children, bgProps }) => {
       </Row>
     </Container>
   );
-};
-
-AuthSplitLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-  bgProps: PropTypes.shape(Background.propTypes).isRequired
 };
 
 export default AuthSplitLayout;
