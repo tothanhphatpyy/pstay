@@ -14,6 +14,7 @@ import {
   topProducts,
   runningProjects
 } from '@data/dashboard/default';
+import { tickets } from '@data/dashboard/support-desk';
 
 import TotalOrder from './TotalOrder';
 import MarketShare from './MarketShare';
@@ -30,6 +31,7 @@ import Weather from './Weather';
 import DigiBirdComponentCard from '@components/common/DigiBirdComponentCard';
 
 import generic1 from '@assets/img/generic/1.jpg';
+import UnsolvedTickets from './UnsolvedTickets';
 const exampleCode = `<div className="d-flex justify-content-center flex-wrap gap-3">
 
   <Card style={{ width: '20rem' }} className='overflow-hidden'>
@@ -78,6 +80,9 @@ const Dashboard = () => {
           <TotalSales data={totalSales} />
         </Col>
       </Row>
+      <Col xxl={9}>
+        <UnsolvedTickets data={tickets} />
+      </Col>
       <DigiBirdComponentCard>
       <DigiBirdComponentCard.Body
         code={exampleCode}

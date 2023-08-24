@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import { chunk } from 'helpers/utils';
+import { chunk } from '@helpers/utils';
 
 const usePagination = (items, itemsPerPage = 5, currentPage = 1) => {
   const setFrom = (itemsPerPage, pageNo) => itemsPerPage * (pageNo - 1) + 1;
