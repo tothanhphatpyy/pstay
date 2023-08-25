@@ -14,7 +14,6 @@ import "../i18n-config";
 
 declare const window: any;
 
-
 if (!window.APP_CONFIG) {
   window.APP_CONFIG = appConfig;
 }

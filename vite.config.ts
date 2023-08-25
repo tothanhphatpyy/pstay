@@ -34,6 +34,7 @@ export default () => {
         '@atom': path.resolve(__dirname, "src/atom"),
         '@services': path.resolve(__dirname, "src/services"),
         '@i18n': path.resolve(__dirname, "./i18n-config.ts"),
+        '@shared': path.resolve(__dirname, "src/shared"),
       },
     },
   });
