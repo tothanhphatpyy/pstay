@@ -1,22 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { profileAtom } from "@atom/profile/profile";
-import { authAtom } from "./auth";
 import { useRequest } from "ahooks";
+
+import { ProfileProps, profileAtom } from "@atom/profile/profile";
+import { AuthProps, authAtom } from "@atom/auth/auth";
 import { signUpWebApi } from "@services/api/auth_api";
 import { StorageKey, removeDataToStorage, setDataToStorage } from "@services/storage";
 
 export const useAuth = () => {
     const navigate = useNavigate();
-    const [userData, setUserState] = useRecoilState(profileAtom);
-    const [auth, setAuth] = useRecoilState(authAtom);
+    const [userData, setUserState] = useRecoilState<ProfileProps | null>(profileAtom);
+    const [auth, setAuth] = useRecoilState<AuthProps | null>(authAtom);
 
     const { runAsync: signUpWeb, loading } = useRequest((data) => signUpWebApi(data), {
         cacheKey: "login-web",
         manual: true,
     });
 
-    const loginWeb = (formData, urlReturn) => {
+    const loginWeb = (formData: any, urlReturn: any) => {
         signUpWeb(formData).then((res:any) => {
             setUserState(formData);
             setAuth({token: res.data, tokenIsValid: true});

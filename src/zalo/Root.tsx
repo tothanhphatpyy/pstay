@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { CloseButton } from "@components/common/Toast";
+
 import { ToastContainer, toast } from "react-toastify";
-import ZaloRoutes from "./routes";
+
+import { CloseButton } from "@components/common/Toast";
+import ZaloRoutes from "@zalo/zalo-routes";
 
 declare const window: any;
 

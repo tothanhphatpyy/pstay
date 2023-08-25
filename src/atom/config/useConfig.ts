@@ -1,8 +1,8 @@
 import { useRecoilState } from "recoil";
-import { configAtom } from "./config";
+import { ConfigProps, configAtom } from "@atom/config/config";
 
 export const useConfig = () => {
-    const [config, setConfig] = useRecoilState(configAtom);
+    const [config, setConfig] = useRecoilState<ConfigProps>(configAtom);
 
     return { config, setConfig };
 }

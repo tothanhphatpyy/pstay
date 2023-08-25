@@ -1,7 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
+
 import classNames from "classnames";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const tabs = {
   "/": {
@@ -43,7 +45,7 @@ const BottomNavigation = () => {
           to={path}
           className={classNames("tab", { active: location.pathname === path })}
         >
-          <FontAwesomeIcon icon={tab.icon} />
+          <FontAwesomeIcon icon={tab.icon as any} />
           <span>{tab.label}</span>
         </Link>
       ))}

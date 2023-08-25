@@ -1,10 +1,12 @@
 import React, { useEffect, useReducer } from 'react';
+
 import PropTypes from 'prop-types';
+import { Chart as ChartJS, registerables } from 'chart.js';
+
 import { getColor, getItemFromStore } from '@helpers/utils';
+import { useConfig } from '@atom/config/useConfig';
 import useToggleStyle from './hooks/useToggleStyle';
 
-import { Chart as ChartJS, registerables } from 'chart.js';
-import { useConfig } from '@atom/config/useConfig';
 ChartJS.register(...registerables);
 
 const Main = props => {

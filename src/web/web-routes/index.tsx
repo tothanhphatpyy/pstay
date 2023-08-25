@@ -1,11 +1,12 @@
 import React from "react";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import SplitLogin from "@components/authentication/split/Login";
-import PrivateRoute from "./PrivateRoute";
-import DashboardLayout from "./dashboard";
-import HRMLayout from "./hrm";
+import { Navigate, Route, Routes } from "react-router-dom";
 
-const DigiBirdRoutes = () => {
+import SplitLogin from "@components/authentication/split/Login";
+import DashboardLayout from "@web/web-routes/dashboard";
+import HRMLayout from "@web/web-routes/hrm";
+import PrivateRoute from "@web/web-routes/PrivateRoute";
+
+const WebRoutes = () => {
   return (
     <Routes>
       <Route element={<PrivateRoute />}>
@@ -18,4 +19,4 @@ const DigiBirdRoutes = () => {
   );
 };
 
-export default DigiBirdRoutes;
+export default WebRoutes;

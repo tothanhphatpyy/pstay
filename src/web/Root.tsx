@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import WebRoutes from "./routes/index";
-import { CloseButton } from "@components/common/Toast";
+
 import { ToastContainer, toast } from "react-toastify";
+
+import { CloseButton } from "@components/common/Toast";
+import WebRoutes from "@web/web-routes";
 
 const WebRoot = () => {
   return (

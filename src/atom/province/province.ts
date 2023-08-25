@@ -1,8 +1,7 @@
 import { atom } from "recoil";
-// import { effects_UNSTABLE } from "recoil-logger-lite";
-import {effects_UNSTABLE} from "../../logger"
+import {effects_UNSTABLE} from "@hooks/useRecoilLogger"
 
-interface IProvince {
+export interface ProvinceProps {
     code: string,
     codename: string,
     division_type: string,
@@ -10,7 +9,7 @@ interface IProvince {
     phone_code: string,
 }
 
-export const provinceAtom = atom<IProvince[]>({
+export const provinceAtom = atom<ProvinceProps[]>({
     key: `PROVINCE`,
     default: [],
     effects_UNSTABLE,

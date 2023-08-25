@@ -1,10 +1,10 @@
+import axios from "axios";
 import { useRecoilState } from "recoil"
 import { useMount, useRequest } from "ahooks";
-import { provinceAtom } from "./province";
-import axios from "axios";
+import { ProvinceProps, provinceAtom } from "@atom/province/province";
 
 export const useProvince= () => {
-    const [province, setProvince] = useRecoilState(provinceAtom);
+    const [province, setProvince] = useRecoilState<ProvinceProps[]>(provinceAtom);
 
     //api lấy danh sách 63 tỉnh VN
     const requestProvince = async () => {
