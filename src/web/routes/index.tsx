@@ -10,7 +10,7 @@ const DigiBirdRoutes = () => {
     <Routes>
       {/* <Route element={<PrivateRoute />}> */}
         <Route path="/*" element={<DashboardLayout />} />
-        <Route path="/hrm/*" element={<HRMLayout />} />
+        <Route path="/account/*" element={<HRMLayout />} />
       {/* </Route> */}
       <Route path="/login" element={<SplitLogin />} />
       <Route path="*" element={<Navigate to="/errors/404" replace />} />

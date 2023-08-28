@@ -16,7 +16,7 @@ export const appRoutes = {
     {
       name: 'site_map.employees',
       icon: 'calendar-alt',
-      to: '/hrm/employees',
+      to: '/account/employees',
       active: true
     },
     {
