@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+
 import is from "is_js";    // sử dụng khi phát triển 2 nền tảng
+
+import ZaloRoot from "@zalo/Root";
+import WebRoot from "@web/Root";  // sử dụng khi phát triển 2 nền tảng
+
 import Main from "./Main";
-import WebRoot from "./web/Root";    // sử dụng khi phát triển 2 nền tảng
-import ZaloRoot from "./zalo/Root";
 
 const App = () => {
   const [platform, setPlatform] = useState("zalo");     // sử dụng khi phát triển 2 nền tảng
@@ -39,13 +42,6 @@ const App = () => {
       HTMLClassList.add("safari");
     }
   }, [HTMLClassList]); 
-
-   /* useEffect(() => {
-    if (navbarPosition === 'double-top') {
-      HTMLClassList.add('double-top-nav-layout');
-    }
-    return () => HTMLClassList.remove('double-top-nav-layout');
-  }, [navbarPosition]); */
 
   // sử dụng dụng khi phát triển 2 nền tảng
   if (loading) {

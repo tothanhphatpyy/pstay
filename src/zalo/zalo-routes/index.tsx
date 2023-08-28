@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+
 import SplitLogin from '@components/authentication/split/Login';
-import BottomNavigation from './Navigation';
 import Dashboard from '@components/dashboard/default';
+import BottomNavigation from '@zalo/zalo-routes/BottomNavigation';
 
 const ZaloRoutes = () => {
   return (

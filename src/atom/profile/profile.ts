@@ -1,7 +1,6 @@
 // recoil
 import { atom } from "recoil";
-
-interface IProfile {
+export interface ProfileProps {
   xid: string;
   name: string;
   phone: string | number | null;
@@ -11,7 +10,7 @@ interface IProfile {
   address: string | null;
 }
 
-export const profileAtom = atom<IProfile>({
+export const profileAtom = atom<ProfileProps>({
   key: "USER", // unique ID (with respect to other atoms/selectors)
   default: {
     xid: "",

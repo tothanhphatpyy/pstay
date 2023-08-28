@@ -6,7 +6,7 @@ import {
   pagesRoutes,
   modulesRoutes,
   documentationRoutes
-} from '@web/routes/siteMaps';
+} from '@web/web-routes/siteMaps';
 import { Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { flatRoutes } from '@helpers/utils';

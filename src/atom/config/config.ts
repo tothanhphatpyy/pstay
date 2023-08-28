@@ -1,9 +1,6 @@
-import { useRequest } from "ahooks";
-import {
-  atom,
-} from "recoil";
+import { atom } from "recoil";
 
-interface IConfig {
+export interface ConfigProps {
   version: string;
   navbarBreakPoint: string;
   topNavbarBreakpoint: string;
@@ -20,7 +17,7 @@ interface IConfig {
   navbarCollapsed: boolean;
 }
 
-export const configAtom = atom<IConfig>({
+export const configAtom = atom<ConfigProps>({
   key: "CONFIG", // unique ID (with respect to other atoms/selectors)
   default: {
     version: "4.2.0",
@@ -28,7 +25,7 @@ export const configAtom = atom<IConfig>({
     topNavbarBreakpoint: "lg",
     isFluid: true,
     isRTL: false,
-    isDark : JSON.parse(localStorage.getItem("isDark")) ?? false,
+    isDark: JSON.parse(localStorage.getItem("isDark") as string) ?? false,
     navbarPosition: "vertical",
     disabledNavbarPosition: [],
     isNavbarVerticalCollapsed: false,
