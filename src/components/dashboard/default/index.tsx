@@ -32,6 +32,9 @@ import DigiBirdComponentCard from '@components/common/DigiBirdComponentCard';
 
 import generic1 from '@assets/img/generic/1.jpg';
 import UnsolvedTickets from './UnsolvedTickets';
+import SkeletonTable from '@components/skeleton/SkeletonTable';
+import SkeletonCard from '@components/skeleton/SkeletonCard';
+
 const exampleCode = `<div className="d-flex justify-content-center flex-wrap gap-3">
 
   <Card style={{ width: '20rem' }} className='overflow-hidden'>
@@ -66,7 +69,7 @@ const Dashboard = () => {
         </Col>
         <Col md={6} xxl={3}>
           <MarketShare data={marketShare} radius={['100%', '87%']} />
-        </Col>
+        </Col>                                                                                    
         <Col md={6} xxl={3}>
           <Weather data={weather} />
         </Col>
@@ -80,16 +83,9 @@ const Dashboard = () => {
           <TotalSales data={totalSales} />
         </Col>
       </Row>
-      <Col xxl={9}>
-        <UnsolvedTickets data={tickets} />
-      </Col>
-      <DigiBirdComponentCard>
-      <DigiBirdComponentCard.Body
-        code={exampleCode}
-        scope={{ generic1 }}
-        language="jsx"
-      />
-      </DigiBirdComponentCard>
+   
+      <SkeletonTable />
+      <SkeletonCard />
 
       {/* <Row className="g-3 mb-3">
         <Col lg={6} xl={7} xxl={8}>

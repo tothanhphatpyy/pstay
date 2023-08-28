@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 import { profileAtom } from "@atom/profile/profile";
 import { authAtom } from "./auth";
 import { useRequest } from "ahooks";
-import { signUpWebApi } from "@services/api/auth_api";
+import { signUpWebApi } from "@services/api/authApi";
 import { StorageKey, removeDataToStorage, setDataToStorage } from "@services/storage";
 
 export const useAuth = () => {

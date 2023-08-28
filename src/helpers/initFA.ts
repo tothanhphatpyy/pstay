@@ -41,7 +41,8 @@ import {
   faQuestionCircle as farQuestionCircle,
   faSmileBeam as farSmileBeam,
   faStar as farStar,
-  faEdit as farEdit
+  faEdit as farEdit,
+  faBookmark as farBookmark
 } from '@fortawesome/free-regular-svg-icons';
 import {
   faAlignLeft,
@@ -228,11 +229,13 @@ import {
   faCommentDollar,
   faHandHoldingWater,
   faCameraRetro,
-  faUtensils
+  faUtensils,
+  faBookmark,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   // Solid
+  faBookmark,
   faEnvelopeOpenText,
   faFileDownload,
   faObjectUngroup,
@@ -417,6 +420,7 @@ library.add(
   faTrophy,
 
   // Regular
+  farBookmark,
   farHeart,
   farLightbulb,
   farObjectUngroup,

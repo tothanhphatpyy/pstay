@@ -1,5 +1,4 @@
 import Dashboard from "@components/dashboard/default";
-import Placeholder from "@components/skeleton/SekeletonCard";
 import MainLayout from "@layouts/MainLayout";
 import React from "react";
 import { Route, Routes } from "react-router-dom";

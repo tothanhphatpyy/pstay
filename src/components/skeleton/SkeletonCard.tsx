@@ -1,13 +1,9 @@
 import React from 'react';
 import { Button, Card, Placeholder } from 'react-bootstrap';
-import PageHeader from '@components/common/PageHeader';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import DigiBirdComponentCard from '@components/common/DigiBirdComponentCard';
-import { reactBootstrapDocsUrl } from '@helpers/utils';
-import generic1 from '@assets/img/generic/1.jpg';
+
 import Flex from '@components/common/Flex';
 
-const SekeletonCard = () => (
+const SkeletonCard = () => (
   <>
     <Card className="h-md-100">
         <Card.Header className="pb-0">
@@ -28,7 +24,7 @@ const SekeletonCard = () => (
             </div>
           </div>
 
-          <div style={{ width: width || "11.5rem", height: 80 }}>
+          <div style={{ width: '100%' || "11.5rem", height: 80 }}>
             <Placeholder animation="glow">
               <Placeholder xs={12} className="h-100" />
             </Placeholder>
@@ -38,4 +34,4 @@ const SekeletonCard = () => (
   </>
 );
 
-export default SekeletonCard;
+export default SkeletonCard;

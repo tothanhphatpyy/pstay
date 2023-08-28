@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil";
 import { profileAtom } from "./profile";
 import { useMount, useRequest } from "ahooks";
-import { getProfileApi } from "@services/api/auth_api";
+import { getProfileApi } from "@services/api/authApi";
 
 export const useUserProfile = () => {
   const [userProfile, setUserState] = useRecoilState(profileAtom);
