@@ -4,7 +4,7 @@ import { useRequest } from "ahooks";
 
 import { ProfileProps, profileAtom } from "@atom/profile/profile";
 import { AuthProps, authAtom } from "@atom/auth/auth";
-import { signUpWebApi } from "@services/api/auth_api";
+import { signUpWebApi } from "@services/api/authApi";
 import { StorageKey, removeDataToStorage, setDataToStorage } from "@services/storage";
 
 export const useAuth = () => {

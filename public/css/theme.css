@@ -965,7 +965,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --digibird-badge-soft-dark-background-color: #ced1d4;
   --digibird-badge-soft-dark-color: #070f19;
   /* --------------------------------- Shadow --------------------------------- */
-  --digibird-box-shadow: 0 7px 14px 0 rgba(65, 69, 88, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
+  --digibird-box-shadow: 0 1px 10px 0 rgba(65, 69, 88, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
   --digibird-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --digibird-box-shadow-lg: 0 1rem 4rem rgba(0, 0, 0, 0.175);
   --digibird-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
@@ -20171,7 +20171,7 @@ pre[class*=language-] {
 .sticky-sidebar {
   position: sticky;
   z-index: 1015;
-  top: calc(var(--digibird-top-nav-height) + 1rem);
+  top: 0;
 }
 
 .top-navbar-height {

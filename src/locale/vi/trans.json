@@ -10,6 +10,17 @@
     "department": "Phòng ban",
     "appreciation": "Đánh giá"
   },
+  "tab_employees": {
+    "profile": "Hồ sơ",
+    "projects": "Dự án",
+    "task": "Công việc",
+    "shift-roster": "Lịch làm việc",
+    "leaves": "Nghỉ phép",
+    "documents": "Tài liệu",
+    "emergency-contacts": "Liên hệ",
+    "appreciation": "Danh hiệu",
+    "permissions": "Phân quyền"
+  },
   "lang": "Tiếng Việt",
   "total_order" : "Tổng số order",
   "button": {

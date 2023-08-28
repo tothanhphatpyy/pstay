@@ -231,10 +231,14 @@ import {
   faCameraRetro,
   faUtensils,
   faBookmark,
+  faMessage,
+  faFaceGrin,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   // Solid
+  faFaceGrin,
+  faMessage,
   faBookmark,
   faEnvelopeOpenText,
   faFileDownload,

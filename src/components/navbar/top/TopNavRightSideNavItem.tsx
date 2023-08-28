@@ -53,8 +53,6 @@ const TopNavRightSideNavItem = () => {
 
       <CartNotification />
       <NotificationDropdown />
-      <NineDotMenu />
-      <ProfileDropdown />
     </Nav>
   );
 };

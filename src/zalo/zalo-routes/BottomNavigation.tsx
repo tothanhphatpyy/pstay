@@ -8,20 +8,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const tabs = {
   "/": {
     label: "Trang chủ",
-    icon: "calendar-alt",
+    icon: "house",
   },
-  "/notification": {
-    label: "Thông báo",
-    icon: "calendar-alt",
+  "/favorite": {
+    label: "Yêu thích",
+    icon: "heart",
   },
-  "/cart": {
-    label: "Giỏ hàng",
-    icon: "calendar-alt",
-    activeIcon: "calendar-alt",
+  "/order": {
+    label: "Đặt chỗ của tôi",
+    icon: "calendar-days",
+  },
+  "/chat": {
+    label: "Tin nhắn",
+    icon: "message",
   },
   "/profile": {
     label: "Cá nhân",
-    icon: "calendar-alt",
+    icon: "face-grin",
   },
 };
 
