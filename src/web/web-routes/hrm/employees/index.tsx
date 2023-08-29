@@ -1,13 +1,13 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import SplitLogin from "@components/authentication/split/Login";
 import Dashboard from "@components/dashboard/default";
-import EmployeeProfile from "@web/web-pages/hrm/employees/EmployeeProfile";
+import EmployeeProfile from "@web/web-pages/hrm/employee/employee-detail";
+import Employees from "@web/web-pages/hrm/employee/employee";
 
 const EmployeesLayout = () => {
   return (
     <Routes>
-      <Route path="/" element={<SplitLogin />} />
+      <Route path="/" element={<Employees />} />
       <Route path="/:id" element={<EmployeeProfile />} />
       <Route path="/:id/edit" element={<Dashboard />} />
 

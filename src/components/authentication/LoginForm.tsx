@@ -9,7 +9,7 @@ import { useAuth } from '@atom/auth/useAuth';
 
 const LoginForm = ({ hasLabel, layout }) => {
   const {state: urlReturn} = useLocation();
-  const { loginWeb } = useAuth();
+  // const { loginWeb } = useAuth();
   // State
   const [formData, setFormData] = useState({
     email: '',

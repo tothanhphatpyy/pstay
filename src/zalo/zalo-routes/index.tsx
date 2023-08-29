@@ -4,7 +4,6 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import SplitLogin from '@components/authentication/split/Login';
 import Dashboard from '@components/dashboard/default';
 import BottomNavigation from '@zalo/zalo-routes/BottomNavigation';
-import MainLayout from '@layouts/MainLayout';
 
 const ZaloRoutes = () => {
   return (
@@ -13,7 +12,7 @@ const ZaloRoutes = () => {
       <Route path="/*" element={<Dashboard />} />
       <Route path="/notification" element={<SplitLogin />} />
       <Route path="/cart" element={<Dashboard />} />
-      <Route path="/profile" element={<MainLayout />} />
+      <Route path="/profile" element={<SplitLogin />} />
       <Route path="*" element={<Navigate to="/errors/404" replace />} />
     </Routes>
     <BottomNavigation />

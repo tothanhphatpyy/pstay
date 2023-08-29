@@ -32,10 +32,6 @@ import DigiBirdComponentCard from '@components/common/DigiBirdComponentCard';
 
 import generic1 from '@assets/img/generic/1.jpg';
 import UnsolvedTickets from './UnsolvedTickets';
-import SkeletonTable from '@shared/skeletons/SkeletonTable';
-import SkeletonCard from '@shared/skeletons/SkeletonCard';
-import Logo from '@components/common/Logo';
-
 
 const exampleCode = `<div className="d-flex justify-content-center flex-wrap gap-3">
 
@@ -62,7 +58,6 @@ const exampleCode = `<div className="d-flex justify-content-center flex-wrap gap
 const Dashboard = () => {
   return (
     <>
-      <Logo at="navbar-top" width={40} id="topLogo" />
       <Row className="g-3 mb-3">
         <Col md={6} xxl={3}>
           <WeeklySales data={weeklySalesData} />
@@ -86,9 +81,6 @@ const Dashboard = () => {
           <TotalSales data={totalSales} />
         </Col>
       </Row>
-   
-      <SkeletonTable/>
-      <SkeletonCard />
 
       {/* <Row className="g-3 mb-3">
         <Col lg={6} xl={7} xxl={8}>

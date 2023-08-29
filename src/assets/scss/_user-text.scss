@@ -1,0 +1,108 @@
+//*-----------------------------------------------
+//|   Fonts Family class
+//-----------------------------------------------*/
+.font-base {
+  font-family: $font-base; //Lexend
+}
+
+.font-number {
+  font-family: $font-number; // Poppins
+}
+
+//*-----------------------------------------------
+//|   Fonts weight class
+//-----------------------------------------------*/
+.text-100 {
+  font-weight: 100;
+}
+
+.text-200 {
+  font-weight: 200;
+}
+
+.text-300 {
+  font-weight: 300;
+}
+
+.text-400 {
+  font-weight: 400;
+}
+
+.text-500 {
+  font-weight: 500;
+}
+
+.text-600 {
+  font-weight: 600;
+}
+
+.text-700 {
+  font-weight: 700;
+}
+
+.text-800 {
+  font-weight: 800;
+}
+
+.text-900 {
+  font-weight: 900;
+}
+
+.text-1000 {
+  font-weight: 1000;
+}
+
+//*-----------------------------------------------
+//|   Fonts Size class
+//-----------------------------------------------*/
+.text-xs {
+  font-size: 12px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+//*-----------------------------------------------
+//|   Text color
+//-----------------------------------------------*/
+
+.text-white {
+  color: "red";
+}
+
+.text-4-medium {
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-5-medium {
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-6-regular {
+  font-family: $font-base;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.text-6-regular-gray {
+  font-family: $font-base;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9da8ba;
+}

@@ -7,11 +7,11 @@ import { AuthProps } from '@atom/auth/auth';
 
 const PrivateRoute = () => {
     let location = useLocation();
-    const { auth } = useAuth(); // check token validate
+    // const { auth } = useAuth(); // check token validate
   
-    if (!(auth as AuthProps).tokenIsValid) {
-      return <Navigate to="/login" replace state={{ from: location }} />;
-    }
+    // if (!(auth as AuthProps).tokenIsValid) {
+    //   return <Navigate to="/login" replace state={{ from: location }} />;
+    // }
   
     return <Outlet />;
   };

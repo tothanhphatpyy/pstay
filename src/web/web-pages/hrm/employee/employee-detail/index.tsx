@@ -2,10 +2,14 @@ import React, { useRef } from "react";
 import { Card, Col, Nav, Row } from "react-bootstrap";
 import useScrollSpy from "react-use-scrollspy";
 import { useTranslation } from "react-i18next";
-import ProfileUser from "@web/web-components/employees/tabs/ProfileUser";
-import Projects from "@web/web-components/employees/tabs/Projects";
+import ProfileUser from "@web/web-pages/hrm/employee/employee-detail/ProfileUser";
+import Projects from "@web/web-pages/hrm/employee/employee-detail/Projects";
+import './styles.scss'
+import PageHeader from "@components/common/PageHeader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-const EmployeeProfile = () => {
+const EmployeeDetail = () => {
   const { t } = useTranslation();
 
   const sectionRefs = [
@@ -62,11 +66,11 @@ const EmployeeProfile = () => {
     offsetPx: -150,
   });
   return (
-    <>
+    <div className="container-content">
       <Row className="g-3">
-        <Col lg={3} className="ps-lg-2 mb-3" style={{width: '20%'}}>
-        <div className="sticky-sidebar">
-            <Card className="sticky-top">
+        <Col lg={3} className="ps-lg-2 mb-3 col-w-20">
+        <div className="sticky-sidebar h-100">
+            <Card className="sticky-top h-100">
               <Card.Body>
                 <div
                   id="terms-sidebar"
@@ -93,10 +97,10 @@ const EmployeeProfile = () => {
           <Projects ref={sectionRefs[1]}/>
         </Col>
       </Row>
-    </>
+    </div>
  
     
   );
 };
 
-export default EmployeeProfile;
+export default EmployeeDetail;
