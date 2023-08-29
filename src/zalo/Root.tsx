@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
 import { CloseButton } from "@components/common/Toast";
-import ZaloRoutes from "@zalo/zalo-routes";
+import ZaloRoutes from "@zalo/routes";
 
 declare const window: any;
 

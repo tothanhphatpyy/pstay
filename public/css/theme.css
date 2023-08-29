@@ -2231,10 +2231,10 @@ a {
   color: var(--digibird-link-color);
   text-decoration: none;
 }
-a:hover {
+/* a:hover {
   color: var(--digibird-link-hover-color);
   text-decoration: underline;
-}
+} */
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;

@@ -1,10 +1,17 @@
+
 .title{
     font-size: 30px;
     font-family: $font-base;
   }
 
-.container-content {
-  margin-top: 1rem;
+
+.container {
+  padding-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 6.375rem;
 }
 
 .bottom-navigation {
@@ -12,12 +19,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #edf2f9;
   box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 0;
+  padding: 5px 0;
   z-index: 50;
 }
 

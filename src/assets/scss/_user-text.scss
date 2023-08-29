@@ -66,10 +66,13 @@
 //*-----------------------------------------------
 //|   Text color
 //-----------------------------------------------*/
-
+.text-color-primary {
+  color: $orange;
+}
 .text-white {
   color: "red";
 }
+
 
 .text-4-medium {
   font-family: $font-base;

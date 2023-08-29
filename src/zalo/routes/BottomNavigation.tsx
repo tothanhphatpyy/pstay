@@ -41,7 +41,7 @@ const BottomNavigation = () => {
   }
 
   return (
-    <nav className={classNames("bottom-navigation")}>
+    <nav className="bottom-navigation dark__bg-1000 bg-light">
       {Object.entries(tabs).map(([path, tab]) => (
         <Link
           key={path}

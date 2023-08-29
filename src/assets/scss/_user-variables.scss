@@ -39,7 +39,6 @@ $grays: (
   "1100": $gray-1100,
   "white": $white,
 ) !default;
-// $body-bg: $gray-200 !default;
 
 //*-----------------------------------------------
 //|   Solid Colors
@@ -49,11 +48,12 @@ $indigo: #727cf5 !default;
 $purple: #6b5eae !default;
 $pink: #ff679b !default;
 $red: #e63757 !default;
-$orange: #fd7e14 !default;
+$orange: #e76e0c !default;
 $yellow: #f5803e !default;
 $green: #00d27a !default;
 $teal: #02a8b5 !default;
 $cyan: #27bcfd !default;
+$bg-color-primary: #fff !default;
 
 //*-----------------------------------------------
 //|   Theme Colors
@@ -72,6 +72,7 @@ $dark: $gray-1100 !default;
 //-----------------------------------------------*/
 $font-base: "Lexend" !default;
 $font-number: "Poppins" !default;
+
 
 
 @import 'user-text';
