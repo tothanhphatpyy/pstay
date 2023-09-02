@@ -143,13 +143,23 @@
   text-align: left;
 }
 
+.heading-4-medium {
+  font-family: $font-base;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 .text-5-medium {
   font-family: $font-base;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
+  color: $text-color-primary;
 }
 
 .text-5-regular {

@@ -9,7 +9,7 @@ import MainLayout from '@layouts/MainLayout';
 
 const ZaloRoutes = () => {
   return (
-    <div className='bg-light dark__bg-1100 container'>
+    <div className='bg-light dark__bg-1100 container-app'>
     <Routes>
       <Route path="/*" element={<Home />} />
       <Route path="/notification" element={<SplitLogin />} />

@@ -4,5 +4,8 @@ export const PATH = {
     //sign_up
     sign_up_web: '/front/login',
     //user
-    get_profile: '/front/user'
+    get_profile: '/front/user',
+
+    //location
+    get_location: '/location',
 }

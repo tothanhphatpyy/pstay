@@ -99,6 +99,7 @@
     "regenerator-runtime": "^0.13.11",
     "simplebar-react": "^3.2.4",
     "slick-carousel": "^1.8.1",
+    "swiper": "^10.2.0",
     "uuid": "^9.0.0",
     "video.js": "^8.3.0",
     "web-vitals": "^3.3.2",

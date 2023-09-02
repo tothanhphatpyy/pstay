@@ -5,14 +5,17 @@
   }
 
 
-.container {
+.container-app {
   max-width: 100% !important;
-  padding-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
   min-height: 100vh;
   position: relative;
   padding-bottom: 6.375rem;
+}
+
+.container {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .bottom-navigation {

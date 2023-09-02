@@ -54,11 +54,13 @@ $green: #00d27a !default;
 $teal: #02a8b5 !default;
 $cyan: #27bcfd !default;
 $bg-color-primary: #fff !default;
+$color-primary: #ffae00;
+$text-color-primary: #424141;
 
 //*-----------------------------------------------
 //|   Theme Colors
 //-----------------------------------------------*/
-$primary: $orange !default;
+$primary: $color-primary !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
@@ -77,3 +79,4 @@ $font-number: "Poppins" !default;
 
 @import 'user-text';
 @import 'user-custom';
+@import 'user-theme';
