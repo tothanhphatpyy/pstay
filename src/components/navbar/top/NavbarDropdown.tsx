@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { Card, Dropdown } from 'react-bootstrap';
-import AuthCornerImage from '@assets/img/illustrations/authentication-corner.png';
+/* import AuthCornerImage from '@assets/img/illustrations/authentication-corner.png'; */
 import { breakpoints, capitalize } from '@helpers/utils';
 import { topNavbarBreakpoint } from '@config';
 
@@ -46,7 +46,7 @@ const NavbarDropdown = ({ title, children }) => {
           >
             {title !== 'dashboard' && title !== 'documentation' && (
               <img
-                src={AuthCornerImage}
+                /* src={AuthCornerImage} */
                 alt=""
                 className="img-dropdown"
                 width={130}

@@ -51,8 +51,8 @@ const TopNavRightSideNavItem = () => {
         </Nav.Link>
       </Nav.Item>
 
-      <CartNotification />
-      <NotificationDropdown />
+      {/* <CartNotification />
+      <NotificationDropdown /> */}
     </Nav>
   );
 };

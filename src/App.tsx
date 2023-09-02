@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import is from "is_js";    // sử dụng khi phát triển 2 nền tảng
 
 import ZaloRoot from "@zalo/Root";
-import WebRoot from "@web/Root";  // sử dụng khi phát triển 2 nền tảng
+/* import WebRoot from "@web/Root";  // sử dụng khi phát triển 2 nền tảng */
 
 import Main from "./Main";
 
@@ -13,7 +13,7 @@ const App = () => {
   const HTMLClassList = document.getElementsByTagName("html")[0].classList;  // sử dụng khi phát triển 2 nền tảng
 
   // sử dụng dụng khi phát triển 2 nền tảng
-  useEffect(() => {
+  /* useEffect(() => {
     const checkPlatform = async () => {
       const port = await location.port; // zmp start chạy trên port 3000 -> zaloweb: 2999
       const isZalo = (await navigator.userAgent.indexOf("Zalo")) !== -1; // chạy trên thiết bị thật
@@ -25,7 +25,7 @@ const App = () => {
     };
 
     checkPlatform();
-  }, []);
+  }, []); */
 
   // sử dụng khi phát triển 2 nền tảng
   useEffect(() => {
@@ -44,7 +44,7 @@ const App = () => {
   }, [HTMLClassList]); 
 
   // sử dụng dụng khi phát triển 2 nền tảng
-  if (loading) {
+  /* if (loading) {
     return (
       <div
         style={{
@@ -57,12 +57,13 @@ const App = () => {
         }}
       />
     );
-  }
+  } */
 
   return (
     <Main>
       {/* //sử dụng khi phát triển 2 nền tảng */}
-      {platform === "zalo" ? <ZaloRoot /> : <WebRoot />} 
+      {/* {platform === "zalo" ? <ZaloRoot /> : <WebRoot />}  */}
+      <ZaloRoot />
     </Main>
   );
 };

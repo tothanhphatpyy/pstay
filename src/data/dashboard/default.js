@@ -1,4 +1,4 @@
-import product10 from '@assets/img/products/10.png';
+/* import product10 from '@assets/img/products/10.png';
 import product11 from '@assets/img/products/11.png';
 import product12 from '@assets/img/products/12.png';
 import product13 from '@assets/img/products/13.png';
@@ -16,7 +16,7 @@ import team3 from '@assets/img/team/3.jpg';
 import team4 from '@assets/img/team/4.jpg';
 import team5 from '@assets/img/team/5.jpg';
 import team6 from '@assets/img/team/6.jpg';
-import team7 from '@assets/img/team/7.jpg';
+import team7 from '@assets/img/team/7.jpg'; */
 
 export const weeklySalesData = [6000, 9000, 8500, 4000, 4500, 6500, 7000];
 
@@ -54,7 +54,7 @@ export const totalSales = [
 export const products = [
   {
     id: 1,
-    img: product12,
+    img: 'oke',
     title: 'Raven Pro',
     type: 'Landing',
     unit: 19,
@@ -62,7 +62,7 @@ export const products = [
   },
   {
     id: 2,
-    img: product10,
+    img: 'oke',
     title: 'Boots4',
     type: 'Portfolio',
     unit: 10,
@@ -70,7 +70,7 @@ export const products = [
   },
   {
     id: 3,
-    img: product11,
+    img: 'oke',
     title: 'DigiBird',
     type: 'Admin',
     unit: 11,
@@ -78,7 +78,7 @@ export const products = [
   },
   {
     id: 4,
-    img: product14,
+    img: 'oke',
     title: 'Slick',
     type: 'Builder',
     unit: 5,
@@ -86,7 +86,7 @@ export const products = [
   },
   {
     id: 5,
-    img: product13,
+    img: 'oke',
     title: 'Reign Pro',
     type: 'Agency',
     unit: 6,
@@ -158,7 +158,7 @@ export const storageStatus = [
 export const files = [
   {
     id: 1,
-    img: product5,
+    img: 'oke',
     name: 'apple-smart-watch.png',
     user: 'Antony',
     time: 'Just Now',
@@ -166,7 +166,7 @@ export const files = [
   },
   {
     id: 2,
-    img: product3,
+    img: 'oke',
     name: 'iphone.jpg',
     user: 'Antony',
     time: 'Yesterday at 1:30 PM',
@@ -174,7 +174,7 @@ export const files = [
   },
   {
     id: 3,
-    img: iconZip,
+    img: 'iconZip',
     name: 'DigiBird v1.8.2',
     user: 'Jane',
     time: '27 Sep at 10:30 AM',
@@ -182,7 +182,7 @@ export const files = [
   },
   {
     id: 4,
-    img: product2,
+    img: 'oke',
     name: 'iMac.jpg',
     user: 'Rowen',
     time: '23 Sep at 6:10 PM',
@@ -190,7 +190,7 @@ export const files = [
   },
   {
     id: 5,
-    img: iconDocs,
+    img: 'iconDocs',
     name: 'functions.php',
     user: 'John',
     time: '1 Oct at 4:30 PM',
@@ -203,7 +203,7 @@ export const users = [
     id: 1,
     name: 'Emma Watson',
     avatar: {
-      src: team1,
+      src: 'team1',
       size: '2xl',
       status: 'online'
     },
@@ -213,7 +213,7 @@ export const users = [
     id: 2,
     name: 'Antony Hopkins',
     avatar: {
-      src: team2,
+      src: 'team2',
       size: '2xl',
       status: 'online'
     },
@@ -223,7 +223,7 @@ export const users = [
     id: 3,
     name: 'Anna Karinina',
     avatar: {
-      src: team3,
+      src: 'team3',
       size: '2xl',
       status: 'away'
     },
@@ -233,7 +233,7 @@ export const users = [
     id: 4,
     name: 'John Lee',
     avatar: {
-      src: team4,
+      src: 'team4',
       size: '2xl',
       status: 'offline'
     },
@@ -243,7 +243,7 @@ export const users = [
     id: 5,
     name: 'Rowen Atkinson',
     avatar: {
-      src: team5,
+      src: 'team5',
       size: '2xl',
       status: 'offline'
     },
@@ -253,7 +253,7 @@ export const users = [
     id: 6,
     name: 'Bucky Robert',
     avatar: {
-      src: team6,
+      src: 'team6',
       size: '2xl',
       status: 'offline'
     },
@@ -263,7 +263,7 @@ export const users = [
     id: 7,
     name: 'Tom Hanks',
     avatar: {
-      src: team7,
+      src: 'team7',
       size: '2xl',
       status: 'offline'
     },

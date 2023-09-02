@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, Col, Row } from 'react-bootstrap';
 import DigiBirdCardHeader from '@components/common/DigiBirdCardHeader';
 import CardDropdown from '@components/common/CardDropdown';
-import weatherIcon from '@assets/img/icons/weather-icon.png';
+// import weatherIcon from '@assets/img/icons/weather-icon.png';
 import Flex from '@components/common/Flex';
 
 const Weather = ({
@@ -28,7 +28,7 @@ const Weather = ({
     <Card.Body className="pt-2">
       <Row className="g-0 h-100 align-items-center">
         <Col as={Flex} alignItems="center">
-          <img className="me-3" src={weatherIcon} alt="" height="60" />
+          {/* <img className="me-3" src={weatherIcon} alt="" height="60" /> */}
           <div>
             <h6 className="mb-2">{city}</h6>
             <div className="fs--2 fw-semi-bold">

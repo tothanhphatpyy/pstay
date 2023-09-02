@@ -1,4 +1,4 @@
-import product1_1 from '@assets/img/products/1.jpg';
+/* import product1_1 from '@assets/img/products/1.jpg';
 import product1_2 from '@assets/img/products/1-2.jpg';
 import product1_3 from '@assets/img/products/1-3.jpg';
 import product1_4 from '@assets/img/products/1-4.jpg';
@@ -11,7 +11,7 @@ import product5 from '@assets/img/products/6.jpg';
 import product6 from '@assets/img/products/5.jpg';
 import product7 from '@assets/img/products/8.jpg';
 import product8 from '@assets/img/products/7.jpg';
-import product9 from '@assets/img/products/9.jpg';
+import product9 from '@assets/img/products/9.jpg'; */
 
 export const productData = [
   {
@@ -72,12 +72,12 @@ export const productData = [
       }
     ],
     files: [
-      { id: 1, src: product1_1 },
-      { id: 2, src: product1_2 },
-      { id: 3, src: product1_3 },
-      { id: 4, src: product1_4 },
-      { id: 5, src: product1_5 },
-      { id: 6, src: product1_6 }
+      { id: 1, src: 'product1_1' },
+      { id: 2, src: 'product1_2' },
+      { id: 3, src: 'product1_3' },
+      { id: 4, src: 'product1_4' },
+      { id: 5, src: 'product1_5' },
+      { id: 6, src: 'product1_6' }
     ]
   },
   {
@@ -140,7 +140,7 @@ export const productData = [
     files: [
       {
         id: 1,
-        src: product2
+        src: 'product2'
       }
     ]
   },
@@ -188,7 +188,7 @@ export const productData = [
         text: "You shouldn't need to read a review to see how nice and polished this theme is. So I'll tell you something you won't find in the demo. After the download I had a technical question, emailed the team and got a response right from the team CEO with helpful advice."
       }
     ],
-    files: [{ id: 1, src: product3 }]
+    files: [{ id: 1, src: 'product3' }]
   },
   {
     name: 'Apple iPhone XS Max (4GB RAM, 512GB ROM, 12MP Main Camera)',
@@ -239,7 +239,7 @@ export const productData = [
         text: 'This really is an amazing template - from the style to the font - clean layout. SO worth the money! The demo pages show off what Bootstrap 4 can impressively do. Great template!! Support response is FAST and the team is amazing - communication is important.'
       }
     ],
-    files: [{ id: 1, src: product4 }]
+    files: [{ id: 1, src: 'product4' }]
   },
   {
     name: 'Logitech G305 Gaming Mouse',
@@ -292,7 +292,7 @@ export const productData = [
         text: 'This really is an amazing template - from the style to the font - clean layout. SO worth the money! The demo pages show off what Bootstrap 4 can impressively do. Great template!! Support response is FAST and the team is amazing - communication is important.'
       }
     ],
-    files: [{ id: 1, src: product5 }]
+    files: [{ id: 1, src: 'product5' }]
   },
   {
     name: 'Apple Watch Series 4 44mm GPS Only',
@@ -345,7 +345,7 @@ export const productData = [
         text: 'This really is an amazing template - from the style to the font - clean layout. SO worth the money! The demo pages show off what Bootstrap 4 can impressively do. Great template!! Support response is FAST and the team is amazing - communication is important.'
       }
     ],
-    files: [{ id: 1, src: product6 }]
+    files: [{ id: 1, src: 'product6' }]
   },
   {
     name: 'Canon Standard Zoom Lens',
@@ -398,9 +398,10 @@ export const productData = [
         text: 'This really is an amazing template - from the style to the font - clean layout. SO worth the money! The demo pages show off what Bootstrap 4 can impressively do. Great template!! Support response is FAST and the team is amazing - communication is important.'
       }
     ],
-    files: [{ id: 1, src: product7 }]
+    files: [{ id: 1, src: 'product7' }]
   },
   {
+
     name: 'Nikon D3200 Digital DSLR Camera',
     category: 'Camera',
     id: 'TN000008',
@@ -443,7 +444,7 @@ export const productData = [
         text: "You shouldn't need to read a review to see how nice and polished this theme is. So I'll tell you something you won't find in the demo. After the download I had a technical question, emailed the team and got a response right from the team CEO with helpful advice."
       }
     ],
-    files: [{ id: 1, src: product8 }]
+    files: [{ id: 1, src: 'product8' }]
   },
   {
     name: 'Nikon AF-S FX NIKKOR 24-70mm',
@@ -496,6 +497,7 @@ export const productData = [
         text: 'This really is an amazing template - from the style to the font - clean layout. SO worth the money! The demo pages show off what Bootstrap 4 can impressively do. Great template!! Support response is FAST and the team is amazing - communication is important.'
       }
     ],
-    files: [{ id: 1, src: product9 }]
+    files: [{ id: 1, src: 'product9' }]
   }
 ];
+

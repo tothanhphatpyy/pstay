@@ -13,6 +13,7 @@ pids
 *.pid.lock
 
 # Dependency directories
+.env
 /node_modules
 /dist
 /yarn.lock

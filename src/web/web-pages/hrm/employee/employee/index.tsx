@@ -15,7 +15,7 @@ const Employees = () => {
 
   return (
     <>
-      <PageHeader
+      {/* <PageHeader
         className="mb-3"
         header="Nhân viên"
         breadcrumb={breadcrumb}
@@ -53,7 +53,7 @@ const Employees = () => {
         }
       />
       
-      <Statistics />
+      <Statistics /> */}
     </>
   );
 };

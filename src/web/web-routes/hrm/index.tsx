@@ -9,11 +9,11 @@ import EmployeesLayout from "./employees";
 const HRMLayout = () => {
   return (
     <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="employees/*" element={<EmployeesLayout />} />
+      {/* <Route element={<MainLayout />}>
+        <Route path="employees/*" element={<Employees />} />
         <Route path="leaves" element={<Dashboard />} />
       </Route>
-      <Route path="*" element={<Navigate to="/errors/404" replace />} />
+      <Route path="*" element={<Navigate to="/errors/404" replace />} /> */}
     </Routes>
   );
 };

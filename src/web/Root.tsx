@@ -10,8 +10,6 @@ const WebRoot = () => {
   return (
     <BrowserRouter>
      <WebRoutes />
-    {/* <SettingsToggle /> */}
-    {/* <SettingsPanel /> */}
     <ToastContainer
       closeButton={CloseButton}
       icon={false}

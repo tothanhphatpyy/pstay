@@ -5,7 +5,7 @@ import IconButton from 'components/common/IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import EmailDetailHeader from './EmailDetailHeader';
 import Avatar from '@components/common/Avatar';
-import team1 from '@assets/img/team/1.jpg';
+/* import team1 from '@assets/img/team/1.jpg'; */
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import womensDay from 'assets/img/icons/spot-illustrations/international-women-s-day-2.png';
@@ -17,7 +17,7 @@ const EmailDetail = () => {
   const [emailDetails] = useState({
     sender: {
       name: 'Emma Watson',
-      avatarSrc: team1,
+      /* avatarSrc: team1, */
       time: '8:40 AM (9 hours ago)',
       email: 'emma@watson.com'
     },

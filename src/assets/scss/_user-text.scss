@@ -5,10 +5,6 @@
   font-family: $font-base; //Lexend
 }
 
-.font-number {
-  font-family: $font-number; // Poppins
-}
-
 //*-----------------------------------------------
 //|   Fonts weight class
 //-----------------------------------------------*/
@@ -66,19 +62,83 @@
 //*-----------------------------------------------
 //|   Text color
 //-----------------------------------------------*/
-.text-color-primary {
-  color: $orange;
-}
+
 .text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-gray-100 {
+  color: $gray-100;
+}
+
+.text-gray-200 {
+  color: $gray-200;
+}
+
+.text-gray-300 {
+  color: $gray-300;
+}
+
+.text-gray-400 {
+  color: $gray-400;
+}
+
+.text-gray-500 {
+  color: $gray-500;
+}
+
+.text-gray-600 {
+  color: $gray-600;
+}
+
+.text-gray-700 {
+  color: $gray-700;
+}
+
+.text-gray-800 {
+  color: $gray-800;
+}
+
+.text-gray-900 {
+  color: $gray-900;
+}
+
+.text-gray-1000 {
+  color: $gray-1000;
+}
+
+.text-gray-1100 {
+  color: $gray-1100;
   color: "red";
 }
 
+.heading-3-medium {
+  font-family: $font-base;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+}
 
 .text-4-medium {
   font-family: $font-base;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.heading-4-medium {
+  font-family: $font-base;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -92,6 +152,15 @@
   text-align: left;
 }
 
+.text-5-regular {
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
 .text-6-regular {
   font-family: $font-base;
   font-size: 13px;
@@ -100,6 +169,7 @@
   letter-spacing: 0em;
   text-align: left;
 }
+
 .text-6-regular-gray {
   font-family: $font-base;
   font-size: 13px;
@@ -108,4 +178,35 @@
   letter-spacing: 0em;
   text-align: left;
   color: #9da8ba;
+}
+
+.text-6-medium {
+  font-family: $font-base;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-7-medium {
+  font-family: $font-base;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-8-regular {
+  font-family: $font-base;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.bg-300 {
+  background-color: $gray-300;
 }
