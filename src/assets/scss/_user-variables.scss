@@ -56,6 +56,7 @@ $cyan: #27bcfd !default;
 $bg-color-primary: #fff !default;
 $color-primary: #ffae00;
 $text-color-primary: #424141;
+$text-dark-primary: #d8e2ef;
 
 //*-----------------------------------------------
 //|   Theme Colors
@@ -75,7 +76,15 @@ $dark: $gray-1100 !default;
 $font-base: "Lexend" !default;
 $font-number: "Poppins" !default;
 
+:root,
+:root.light,
+:root .light {
+  --text-color: #{$text-color-primary};
+}
 
+.dark{
+  --text-color:#{$text-dark-primary};
+}
 
 @import 'user-text';
 @import 'user-custom';
