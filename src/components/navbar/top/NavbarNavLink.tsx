@@ -3,20 +3,17 @@ import PropTypes from 'prop-types';
 import { Nav } from 'react-bootstrap';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import AppContext from '@context/Context';
+import { useConfig } from '@atom/config/useConfig';
 
 const NavbarNavLink = ({ title, route }) => {
-  const {
-    config: { navbarCollapsed, showBurgerMenu },
-    setConfig
-  } = useContext(AppContext);
+  const {config, setConfig} = useConfig();
 
   const handleClick = () => {
-    if (navbarCollapsed) {
-      setConfig('navbarCollapsed', !navbarCollapsed);
+    if (config.navbarCollapsed) {
+      setConfig({...config, navbarCollapsed: !config.navbarCollapsed});
     }
-    if (showBurgerMenu) {
-      setConfig('showBurgerMenu', !showBurgerMenu);
+    if (config.showBurgerMenu) {
+      setConfig({...config, showBurgerMenu: !config.showBurgerMenu});
     }
   };
   return (

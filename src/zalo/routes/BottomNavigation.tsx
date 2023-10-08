@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate, useNavigation } from "react-router-dom";
 
 import classNames from "classnames";
 
@@ -32,6 +32,7 @@ export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/category"];
 
 const BottomNavigation = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const noBottomNav = useMemo(() => {
     return NO_BOTTOM_NAVIGATION_PAGES.includes(location.pathname);
   }, [location]);
@@ -43,14 +44,14 @@ const BottomNavigation = () => {
   return (
     <nav className="bottom-navigation dark__bg-1000 bg-light">
       {Object.entries(tabs).map(([path, tab]) => (
-        <Link
+        <div
           key={path}
-          to={path}
+          onClick={() => {navigate(path)}}
           className={classNames("tab", { active: location.pathname === path })}
         >
           <FontAwesomeIcon icon={tab.icon as any} />
           <span>{tab.label}</span>
-        </Link>
+        </div>
       ))}
     </nav>
   );

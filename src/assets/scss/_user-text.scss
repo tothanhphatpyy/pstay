@@ -6,6 +6,14 @@
 }
 
 //*-----------------------------------------------
+//|   Text color
+//-----------------------------------------------*/
+.color-base {
+  color: $text-color-primary !important;
+}
+
+
+//*-----------------------------------------------
 //|   Fonts weight class
 //-----------------------------------------------*/
 .text-100 {
@@ -59,12 +67,7 @@
   font-size: 14px;
 }
 
-//*-----------------------------------------------
-//|   Text color
-//-----------------------------------------------*/
-.text-primary-cl {
-  color: $color-primary;
-}
+
 
 .text-white {
   color: $white;
@@ -137,14 +140,6 @@
   text-align: left;
 }
 
-.heading-4-medium {
-  font-family: $font-base;
-  font-size: 23px;
-  font-weight: 500;
-  line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
-}
 
 .heading-4-medium {
   font-family: $font-base;
@@ -161,7 +156,7 @@
   font-weight: 500;
   line-height: 18px;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: left;
   color: var(--text-color);
 }
 
@@ -171,7 +166,7 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: left;
 }
 
 .text-6-regular {

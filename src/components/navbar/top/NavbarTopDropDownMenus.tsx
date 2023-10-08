@@ -13,20 +13,17 @@ import { flatRoutes } from '@helpers/utils';
 import NavbarDropdownApp from './NavbarDropdownApp';
 import NavbarDropdownPages from './NavbarDropdownPages';
 import NavbarDropdownModules from './NavbarDropdownModules';
-import AppContext from '@context/Context';
+import { useConfig } from '@atom/config/useConfig';
 
 const NavbarTopDropDownMenus = () => {
-  const {
-    config: { navbarCollapsed, showBurgerMenu },
-    setConfig
-  } = useContext(AppContext);
+  const {config, setConfig} = useConfig();
 
   const handleDropdownItemClick = () => {
-    if (navbarCollapsed) {
-      setConfig('navbarCollapsed', !navbarCollapsed);
+    if (config.navbarCollapsed) {
+      setConfig({...config, navbarCollapsed: !config.navbarCollapsed});
     }
-    if (showBurgerMenu) {
-      setConfig('showBurgerMenu', !showBurgerMenu);
+    if (config.showBurgerMenu) {
+      setConfig({...config, showBurgerMenu: !config.showBurgerMenu});
     }
   };
   return (

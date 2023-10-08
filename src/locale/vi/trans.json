@@ -1,32 +1,11 @@
 {
-  "site_map": {
-    "dashboard": "Trang quản trị",
-    "employees": "Nhân viên",
-    "leaves": "Nghỉ phép",
-    "shift_roster": "Lịch làm việc",
-    "attendance": "Chấm công",
-    "holiday": "Ngày nghỉ",
-    "designation": "Cơ cấu tổ chức",
-    "department": "Phòng ban",
-    "appreciation": "Đánh giá"
+  "tab":{
+    "home": "Trang chủ",
+    "favorites": "Yêu thích",
+    "oder": "Đặt chỗ của tôi",
+    "messages": "Tin nhắn",
+    "account": "Cá nhân"
   },
-  "tab_employees": {
-    "profile": "Hồ sơ",
-    "projects": "Dự án",
-    "task": "Công việc",
-    "shift-roster": "Lịch làm việc",
-    "leaves": "Nghỉ phép",
-    "documents": "Tài liệu",
-    "emergency-contacts": "Liên hệ",
-    "appreciation": "Danh hiệu",
-    "permissions": "Phân quyền"
-  },
-  "lang": "Tiếng Việt",
-  "total_order" : "Tổng số order",
-  "button": {
-    "search": "Tìm kiếm",
-    "cancel": "Hủy",
-    "delete": "Xóa",
-    "save": "Lưu"
-  }
+  "homestay" : "Homestay",
+  "Hotel": "Khách sạn"
 }

@@ -2,10 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import NavbarTop from '@components/navbar/top/NavbarTop';
-import NavbarVertical from '@components/navbar/vertical/NavbarVertical';
-import Footer from '@components/footer/Footer';
-import ProductProvider from '@components/app/e-commerce/ProductProvider';
-import CourseProvider from '@components/app/e-learning/CourseProvider';
 import { useConfig } from '@atom/config/useConfig';
 
 const MainLayout = () => {
@@ -36,7 +32,7 @@ const MainLayout = () => {
       {/* {(config.navbarPosition === 'vertical' || config.navbarPosition === 'combo') && (
         <NavbarVertical />
       )} */}
-      <ProductProvider>
+      {/* <ProductProvider> */}
         {/* <CourseProvider> */}
           <div className={classNames('content', { 'pb-0': isKanban })}>
             <NavbarTop />
@@ -45,7 +41,7 @@ const MainLayout = () => {
             {!isKanban && <Footer />} */}
           </div>
         {/* </CourseProvider> */}
-      </ProductProvider>
+      {/* </ProductProvider> */}
     </div>
   );
 };
