@@ -9,6 +9,7 @@ import appConfig from "../app-config.json";
 import "@helpers/initFA";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-toastify/dist/ReactToastify.min.css";
+import 'swiper/scss';
 import "@assets/scss/user.scss";
 import "../i18n-config";
 

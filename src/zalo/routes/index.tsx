@@ -18,8 +18,8 @@ const ZaloRoutes = () => {
       <Route path="/favorite" element={<SplitLogin />} />
       <Route path="/order" element={<Dashboard />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/components/products" element={<Products />} />
-      <Route path="/components/categories" element={<Categories />} />
+      <Route path="/components/products/:productLayout" element={<Products />} />
+      <Route path="/components/categories/:categoryLayout" element={<Categories />} />
       <Route path="*" element={<Navigate to="/errors/404" replace />} />
     </Routes>
     <BottomNavigation />

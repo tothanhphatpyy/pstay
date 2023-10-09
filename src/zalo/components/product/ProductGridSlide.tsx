@@ -18,7 +18,7 @@ import ModalVideoContent from "@components/app/e-learning/ModalVideoContent";
 import Hoverbox from "@components/common/Hoverbox";
 import playIcon from "@assets/icons/play.svg";
 
-const ProductGrid = ({ product, ...rest }) => {
+const ProductGridSlide = ({ product, ...rest }) => {
   const {
     name,
     category,
@@ -44,7 +44,7 @@ const ProductGrid = ({ product, ...rest }) => {
         setShow={setShowModal}
         attachment={{ image: videoPoster, src: video }}
       />
-      <Col className="mb-4 gap-3 p-2" md={6} lg={4} xs={6}>
+      <Col className="mb-4 gap-3 p-2" md={6} lg={4} xs={12}>
         <Flex direction="column" className="border rounded-1 h-100 pb-3">
           <div className="overflow-hidden">
             {video ? (
@@ -167,7 +167,7 @@ const ProductGrid = ({ product, ...rest }) => {
   );
 };
 
-ProductGrid.propTypes = {
+ProductGridSlide.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
@@ -185,4 +185,4 @@ ProductGrid.propTypes = {
   }),
 };
 
-export default ProductGrid;
+export default ProductGridSlide;

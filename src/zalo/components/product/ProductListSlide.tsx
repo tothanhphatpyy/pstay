@@ -12,7 +12,7 @@ import ModalVideoContent from "@components/app/e-learning/ModalVideoContent";
 import Hoverbox from "@components/common/Hoverbox";
 import playIcon from "@assets/icons/play.svg";
 
-const ProductList = ({ product, index }) => {
+const ProductListSlide = ({ product, index }) => {
   const {
     name,
     category,
@@ -142,8 +142,8 @@ const ProductList = ({ product, index }) => {
                     </p>
                   </div>
                 </div>
-                {/* <div className="mt-2">
-                  <IconButton
+                <div className="mt-2">
+                  {/* <IconButton
                     size="sm"
                     variant={
                       isInFavouriteItems(id)
@@ -166,8 +166,8 @@ const ProductList = ({ product, index }) => {
                     onClick={() => handleAddToCart(1, true, true)}
                   >
                     Add to Cart
-                  </IconButton>
-                </div> */}
+                  </IconButton> */}
+                </div>
               </Col>
             </Row>
           </Col>
@@ -177,7 +177,7 @@ const ProductList = ({ product, index }) => {
   );
 };
 
-ProductList.propTypes = {
+ProductListSlide.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
@@ -196,4 +196,4 @@ ProductList.propTypes = {
   index: PropTypes.number,
 };
 
-export default ProductList;
+export default ProductListSlide;

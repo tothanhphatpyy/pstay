@@ -151,13 +151,13 @@
 }
 
 .text-5-medium {
-  font-family: $font-base;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: var(--text-color);
+  font-family: $font-base !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  letter-spacing: 0em !important; 
+  text-align: left !important; 
+  color: var(--text-color) !important;
 }
 
 .text-5-regular {

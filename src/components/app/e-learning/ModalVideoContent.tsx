@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { CloseButton, Modal } from 'react-bootstrap';
+import React from "react";
+import PropTypes from "prop-types";
+import { CloseButton, Modal } from "react-bootstrap";
 
 const ModalVideoContent = ({ show, setShow, attachment }) => {
+
   return (
     <Modal
       show={show}
       size="xl"
       onHide={() => setShow(false)}
       className="video-popup"
-      contentClassName="bg-transparent border-0"
+      contentClassName="border-0"
       backdropClassName="video-popup-backdrop"
       centered
     >
@@ -19,7 +20,7 @@ const ModalVideoContent = ({ show, setShow, attachment }) => {
         className="video-popup-close-btn"
       />
       <Modal.Body className="p-0 rounded overflow-hidden">
-        <video
+        {/* <video
           poster={attachment.image}
           className="d-block"
           width="100%"
@@ -28,7 +29,14 @@ const ModalVideoContent = ({ show, setShow, attachment }) => {
           autoPlay
         >
           <source src={attachment.src} type="video/mp4" />
-        </video>
+        </video> */}
+        <iframe
+          width="100%"
+          height="100%"
+          src={attachment.src}
+          frameBorder="0"
+          allowFullScreen
+        ></iframe>
       </Modal.Body>
     </Modal>
   );
@@ -43,8 +51,8 @@ ModalVideoContent.propTypes = {
     src: PropTypes.string,
     title: PropTypes.string,
     date: PropTypes.string,
-    type: PropTypes.string
-  })
+    type: PropTypes.string,
+  }),
 };
 
 export default ModalVideoContent;
