@@ -181,50 +181,15 @@ const courseFilters = [
     ],
   },
   {
-    label: "Language",
+    label: "Form Demo",
     options: [
       {
-        label: "English",
+        label: "Form",
         type: "checkbox",
         selected: true,
         value: "english",
         name: "english",
-      },
-      {
-        label: "Spanish",
-        type: "checkbox",
-        value: "spanish",
-        name: "spanish",
-      },
-      {
-        label: "French",
-        type: "checkbox",
-        value: "french",
-        name: "french",
-      },
-      {
-        label: "German",
-        type: "checkbox",
-        value: "german",
-        name: "german",
-      },
-      {
-        label: "Bengali",
-        type: "checkbox",
-        value: "bengali",
-        name: "bengali",
-      },
-      {
-        label: "Hindi",
-        type: "checkbox",
-        value: "hindi",
-        name: "hindi",
-      },
-      {
-        label: "Arabic",
-        type: "checkbox",
-        value: "arabic",
-        name: "arabic",
+        href: "/demo-form"
       },
     ],
   },
