@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import SplitLogin from '@components/authentication/split/Login';
 import Dashboard from '@components/dashboard/default';
 import BottomNavigation from '@zalo/routes/BottomNavigation';
 import Home from '@zalo/pages/tab/Home';
@@ -24,7 +23,7 @@ const ZaloRoutes = () => {
     <div className='bg-light dark__bg-1100 container-app'>
     <Routes>
       <Route path="/*" element={<Home />} />
-      <Route path="/favorite" element={<SplitLogin />} />
+      <Route path="/favorite" element={<Dashboard />} />
       <Route path="/order" element={<Dashboard />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/components/products/:productLayout" element={<Products />} />
