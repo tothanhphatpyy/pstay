@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import SplitLogin from '@components/authentication/split/Login';
@@ -11,8 +11,15 @@ import Products from '@zalo/pages/components/products';
 import Categories from '@zalo/pages/components/categories';
 import Sliders from '@zalo/pages/components/sliders';
 import Demo from '@layouts/demo/Demo';
+import { useUser } from '@atom/user/useUser';
 
 const ZaloRoutes = () => {
+
+  const { authUser } = useUser();
+  useEffect(() => {
+    authUser();
+  },[])
+  
   return (
     <div className='bg-light dark__bg-1100 container-app'>
     <Routes>

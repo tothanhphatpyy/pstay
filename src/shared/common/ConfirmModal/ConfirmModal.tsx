@@ -1,7 +1,7 @@
 import React, { useImperativeHandle, useState } from "react"
 import { Button, Image, Modal, Stack } from "react-bootstrap"
-import confirmModalTrash from "@assets/images/confirm-modal/delete.png"
-import confirmModalSaveFile from "@assets/images/confirm-modal/save-file.png"
+import confirmModalTrash from "@assets/images/logo/Logo-DigiBird.png"
+import confirmModalSaveFile from "@assets/images/logo/Logo-DigiBird.png"
 
 export interface GlobalMessageProps {
   title?: string
