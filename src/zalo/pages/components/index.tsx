@@ -147,14 +147,15 @@ const courseFilters = [
     ],
   },
   {
-    label: "Rating",
+    label: "Slider",
     options: [
       {
-        label: "4.5 & Up",
+        label: "Slider Scroll",
         icon: "star",
         type: "radio",
         name: "rating",
         value: 4.5,
+        href: "/components/sliders/slider-scroll"
       },
       {
         label: "4.0 & Up",

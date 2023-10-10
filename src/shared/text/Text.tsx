@@ -1,8 +1,14 @@
 import React from 'react';
 
-const Text = ({ className,children }) => {
+interface TextProps {
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}
+
+const Text: React.FC<TextProps> = ({ className, style, children }) => {
   return (
-    <div className={className}>
+    <div className={className} style={style}>
       {children}
     </div>
   );

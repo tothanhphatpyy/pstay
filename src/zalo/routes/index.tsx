@@ -9,6 +9,7 @@ import MainLayout from '@layouts/MainLayout';
 import Profile from '@zalo/pages/tab/Profile';
 import Products from '@zalo/pages/components/products';
 import Categories from '@zalo/pages/components/categories';
+import Sliders from '@zalo/pages/components/sliders';
 
 const ZaloRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const ZaloRoutes = () => {
       <Route path="/profile" element={<Profile />} />
       <Route path="/components/products/:productLayout" element={<Products />} />
       <Route path="/components/categories/:categoryLayout" element={<Categories />} />
+      <Route path="/components/sliders/:sliderLayout" element={<Sliders />} />
       <Route path="*" element={<Navigate to="/errors/404" replace />} />
     </Routes>
     <BottomNavigation />

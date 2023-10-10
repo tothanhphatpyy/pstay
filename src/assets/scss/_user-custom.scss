@@ -1,4 +1,8 @@
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .title{
     font-size: 30px;
     font-family: $font-base;
