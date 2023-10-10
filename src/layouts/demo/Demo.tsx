@@ -1,20 +1,20 @@
 import React from 'react'
 import { Button, Container, ThemeProvider } from 'react-bootstrap'
-import { useForm } from 'react-hook-form'
+/* import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { CustomButton } from '@shared/common/CustomButton'
+import { CustomButton } from '@shared/common/CustomButton' */
 import { GlobalLoading } from '@shared/common/GlobalLoading' 
 import { globalLoading, globalLoadingRef } from '@shared/common/GlobalLoading/GlobalLoading'
 
-import { DemoConfirmModal } from './Component/DemoConfirmModal'
+/* import { DemoConfirmModal } from './Component/DemoConfirmModal' */
 import { ConfirmModal } from '@shared/common/ConfirmModal'
 import { confirmModalRef } from '@shared/common/ConfirmModal/ConfirmModal'
 import { ToastContainer } from 'react-toastify'
-import DemoCustomToast from './Component/DemoCustomToast/DemoCustomToast'
+/* import DemoCustomToast from './Component/DemoCustomToast/DemoCustomToast' */
 import { DemoFormInput } from './Component/DemoFormInput'
-import { CustomTable } from '@shared/common/CustomTable'
-import { DemoTable } from './Component/DemoTable'
+/* import { CustomTable } from '@shared/common/CustomTable'
+import { DemoTable } from './Component/DemoTable' */
 
 const Demo = () => {
 
@@ -33,8 +33,8 @@ const Demo = () => {
                 <DemoFormInput />
                 <Button className='my-3' onClick={handleClickLoading3s}>Loading 3s ...</Button>
                 {/* <DemoTable /> */}
-                <DemoConfirmModal />
-                <DemoCustomToast />
+                {/* <DemoConfirmModal />
+                <DemoCustomToast /> */}
             </Container>
         </>
     )

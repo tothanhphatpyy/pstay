@@ -2,7 +2,6 @@ import React from "react";
 
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { Button, Col, Row, Stack } from "react-bootstrap";
 import {
   CustomToastType,
@@ -10,18 +9,17 @@ import {
 } from "@shared/common/CustomToast";
 import {
   InputCheckBox,
+  InputText,
   InputDate,
   InputNumber,
   InputRadio,
   InputSelect,
   InputSwitch,
-  InputText,
   InputTextArea,
-  InputTextEditor,
+  // InputTextEditor,
 } from "@shared/common/FormInput";
 import { DEMO_FIELD_NAME } from "./fieldname";
 import { demoSchema } from "./schema";
-import { typeTextInput } from "@components/common/FormInput/helper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const options = [
@@ -143,7 +141,7 @@ const DemoFormInput = () => {
               dateFormat="dd/MM/yyyy"
             />
           </Col>
-        </Row>
+        </Row> 
         <Row>
           <Col xs={12}>
             <InputTextArea
@@ -156,7 +154,7 @@ const DemoFormInput = () => {
             />
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col xs={12}>
             <InputTextEditor
               label={"Input Text Editor"}
@@ -167,7 +165,7 @@ const DemoFormInput = () => {
               errorMessage={errors["inputTextEditor"]?.message || ""}
             />
           </Col>
-        </Row>
+        </Row> */}
         <Row>
           <Col xs={12}>
             <InputSelect
@@ -188,7 +186,7 @@ const DemoFormInput = () => {
             name={DFN.INPUT_CHECKBOX}
             label="This is checkbox"
             required
-            errorMessage={errors[DFN.INPUT_CHECKBOX]?.message || ""}
+            //errorMessage={errors[DFN.INPUT_CHECKBOX]?.message || ""}
             onChangeValue={(value: boolean) => {
               console.log("check box value", value);
             }}
